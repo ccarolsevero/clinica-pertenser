@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
@@ -48,24 +49,34 @@ const faqs = [
 export default function AvaliacaoPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="hero-photo">
+        <Image
+          src="/avaliacao-hero-aplicacao.png"
+          alt="Aplicação de avaliação psicológica com instrumento e escuta"
+          fill
+          priority
+          sizes="100vw"
+          className="hero-photo-image"
+        />
         <div className="container">
-          <p className="eyebrow">Avaliação psicológica para adultos</p>
-          <h1>Compreender o que acontece com você vai além de encontrar um diagnóstico.</h1>
-          <div className="lead" style={{ marginTop: 24 }}>
-            <p>
-              A avaliação psicológica é um processo de investigação que considera sua história, seu funcionamento e as dificuldades que você vivencia.
-            </p>
-            <p>
-              Na PertenSer, o foco principal é a investigação de TDAH e Transtorno do Espectro Autista (TEA) em adultos, considerando também diagnósticos diferenciais e possíveis condições associadas.
-            </p>
+          <div className="hero-photo-content">
+            <p className="eyebrow">Avaliação psicológica para adultos</p>
+            <h1>Compreender o que acontece com você vai além de encontrar um diagnóstico.</h1>
+            <div className="lead" style={{ marginTop: 24 }}>
+              <p>
+                A avaliação psicológica é um processo de investigação que considera sua história, seu funcionamento e as dificuldades que você vivencia.
+              </p>
+              <p>
+                Na PertenSer, o foco principal é a investigação de TDAH e Transtorno do Espectro Autista (TEA) em adultos, considerando também diagnósticos diferenciais e possíveis condições associadas.
+              </p>
+            </div>
+            <div className="actions">
+              <Button href={teamMessage} external>
+                Quero conhecer a avaliação
+              </Button>
+            </div>
+            <p className="support">Atendimento online para adultos em todo o Brasil.</p>
           </div>
-          <div className="actions">
-            <Button href={teamMessage} external>
-              Quero conhecer a avaliação
-            </Button>
-          </div>
-          <p className="support">Atendimento online para adultos em todo o Brasil.</p>
         </div>
       </section>
 
