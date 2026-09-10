@@ -1,0 +1,158 @@
+import type { Metadata } from "next";
+import { Button } from "@/components/Button";
+import { CTA } from "@/components/CTA";
+import { FAQ } from "@/components/FAQ";
+import { ProcessSteps } from "@/components/ProcessSteps";
+import { tdahProcess } from "@/lib/content";
+import { site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "TDAH em adultos",
+  description:
+    "Avaliação psicológica para investigar a possibilidade de TDAH na vida adulta, considerando história, funcionamento e diagnósticos diferenciais.",
+};
+
+const faqs = [
+  {
+    question: "Preciso ter certeza de que tenho TDAH?",
+    answer:
+      "Não. A avaliação existe justamente para investigar essa hipótese e compreender o que pode explicar as dificuldades apresentadas.",
+  },
+  {
+    question: "E se a avaliação não confirmar TDAH?",
+    answer:
+      "Mesmo quando a hipótese inicial não é confirmada, os resultados podem ajudar a compreender melhor seu funcionamento e orientar os próximos cuidados.",
+  },
+  {
+    question: "Outras possibilidades também são investigadas?",
+    answer:
+      "Sim. A avaliação pode considerar diagnósticos diferenciais e possíveis condições associadas relevantes para a compreensão do caso.",
+  },
+  {
+    question: "A avaliação é online?",
+    answer:
+      "Sim. O processo é realizado online para adultos em diferentes regiões do Brasil. Caso seja necessário algum procedimento complementar presencial, você será orientado.",
+  },
+  {
+    question: "Quanto tempo dura?",
+    answer:
+      "A duração varia conforme cada caso. Em média, o processo acontece ao longo de 8 sessões.",
+  },
+  {
+    question: "Recebo um laudo?",
+    answer:
+      "Sim. Ao final do processo, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação realizada.",
+  },
+];
+
+export default function TdahPage() {
+  return (
+    <>
+      <section className="page-hero">
+        <div className="container">
+          <p className="eyebrow">TDAH em adultos</p>
+          <h1>Investigar a possibilidade de TDAH é também compreender a sua história.</h1>
+          <p className="lead" style={{ marginTop: 24 }}>
+            A avaliação psicológica permite investigar a hipótese de TDAH na vida adulta considerando suas dificuldades, sua história de vida e seu funcionamento de forma ampla.
+          </p>
+          <div className="actions">
+            <Button href="/avaliacao-psicologica">Quero conhecer a avaliação</Button>
+          </div>
+          <p className="support">Avaliação psicológica online para adultos em todo o Brasil.</p>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <div className="section-head">
+            <h2>Talvez algumas dificuldades tenham acompanhado você por muito tempo sem uma explicação clara.</h2>
+            <div className="lead" style={{ marginTop: 20 }}>
+              <p>
+                Para algumas pessoas, a possibilidade de TDAH surge apenas na vida adulta, quando começam a buscar respostas para dificuldades que ainda não foram suficientemente compreendidas.
+              </p>
+              <p>Você não precisa ter certeza de que é TDAH para procurar uma avaliação.</p>
+            </div>
+            <p className="quote">A suspeita é um ponto de partida para investigar — não uma conclusão.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">Avaliação de TDAH em adultos</p>
+            <h2>Uma avaliação olha além da hipótese inicial.</h2>
+            <div className="lead" style={{ marginTop: 20 }}>
+              <p>
+                Na PertenSer, a investigação considera sua história de vida, seu funcionamento cognitivo, emocional e comportamental e os impactos das dificuldades no cotidiano.
+              </p>
+              <p>O processo pode envolver entrevistas, instrumentos psicológicos e informações complementares.</p>
+              <p>
+                Além da hipótese de TDAH, também são considerados diagnósticos diferenciais e possíveis condições associadas quando relevantes para a compreensão do caso.
+              </p>
+            </div>
+            <p className="quote">
+              O objetivo não é confirmar TDAH a qualquer custo, mas compreender o que melhor explica as dificuldades que você vivencia.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">O processo</p>
+            <h2>Como acontece a avaliação?</h2>
+          </div>
+          <ProcessSteps
+            steps={tdahProcess}
+            note="Cada avaliação é individualizada e sua duração pode variar. Em média, o processo acontece ao longo de 8 sessões."
+          />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2>Uma avaliação cuidadosa para uma compreensão mais ampla.</h2>
+            <div className="lead" style={{ marginTop: 20 }}>
+              <p>
+                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TDAH e Transtorno do Espectro Autista (TEA).
+              </p>
+              <p>
+                Os processos são conduzidos com rigor técnico, supervisão e atenção às particularidades de cada história.
+              </p>
+            </div>
+            <p className="signature">
+              <strong>{site.responsible.name}</strong>
+              {site.responsible.role}
+              <br />
+              {site.responsible.specialty}
+              <br />
+              {site.responsible.title}
+            </p>
+            <div className="actions">
+              <Button href="/sobre">Conheça a PertenSer</Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="container">
+          <div className="section-head">
+            <h2>Dúvidas sobre a avaliação de TDAH em adultos</h2>
+          </div>
+          <FAQ items={faqs} />
+        </div>
+      </section>
+
+      <CTA
+        title="Quer compreender melhor o que pode estar por trás das suas dificuldades?"
+        text="Se você deseja investigar a possibilidade de TDAH, converse com a equipe da PertenSer para entender como funciona a avaliação e quais são os próximos passos."
+        support="Avaliação psicológica online para adultos em todo o Brasil."
+        showWhatsapp
+      />
+    </>
+  );
+}
