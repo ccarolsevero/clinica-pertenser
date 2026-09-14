@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { site } from "@/lib/site";
@@ -12,19 +13,31 @@ export const metadata: Metadata = {
 export default function PsicoterapiaPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="hero-photo">
+        <div className="hero-photo-media">
+          <Image
+            src="/psicoterapia-hero.png"
+            alt="Bruna Kindlein, psicóloga responsável pela psicoterapia"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-image hero-photo-psicoterapia"
+          />
+        </div>
         <div className="container">
-          <p className="eyebrow">Psicoterapia para adultos</p>
-          <h1>Um espaço de cuidado para o que você está vivendo.</h1>
-          <p className="lead" style={{ marginTop: 24 }}>
-            Psicoterapia online para adultos, com acompanhamento individualizado de acordo com suas necessidades e objetivos.
-          </p>
-          <div className="actions">
-            <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Olá, gostaria de saber mais sobre a psicoterapia da PertenSer.")}`} external>
-              Quero saber mais
-            </Button>
+          <div className="hero-photo-content">
+            <p className="eyebrow">Psicoterapia para adultos</p>
+            <h1>Um espaço de cuidado para o que você está vivendo.</h1>
+            <p className="lead" style={{ marginTop: 24 }}>
+              Psicoterapia online para adultos, com acompanhamento individualizado de acordo com suas necessidades e objetivos.
+            </p>
+            <div className="actions">
+              <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Olá, gostaria de saber mais sobre a psicoterapia da PertenSer.")}`} external>
+                Quero saber mais
+              </Button>
+            </div>
+            <p className="support">Atendimento online.</p>
           </div>
-          <p className="support">Atendimento online.</p>
         </div>
       </section>
 
