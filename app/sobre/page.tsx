@@ -18,12 +18,12 @@ export default function SobrePage() {
       <section className="hero-photo">
         <div className="hero-photo-media">
           <Image
-            src="/sobre-hero.png"
+            src="/home-hero.png"
             alt="Bruna Kindlein, fundadora da Clínica PertenSer"
             fill
             priority
             sizes="100vw"
-            className="hero-photo-image hero-photo-sobre"
+            className="hero-photo-image hero-photo-home"
           />
         </div>
         <div className="container">
@@ -67,7 +67,7 @@ export default function SobrePage() {
       <section className="section">
         <div className="container split reverse">
           <PortraitSlot
-            src="/sobre-hero.png"
+            src="/home-hero.png"
             alt="Bruna Kindlein, psicóloga e fundadora da Clínica PertenSer"
             className="portrait-sobre"
           />

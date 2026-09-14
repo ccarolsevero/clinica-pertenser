@@ -23,21 +23,43 @@ export function Header() {
     setOpen(false);
   }, [pathname]);
 
+  const isActive = (href: string, children?: { href: string }[]) =>
+    pathname === href || Boolean(children?.some((child) => pathname === child.href));
+
   return (
     <header className={`header${scrolled || open ? " scrolled" : ""}${open ? " open" : ""}`}>
       <div className="container header-inner">
         <Logo priority />
 
         <nav className="nav" aria-label="Principal">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={pathname === item.href ? "active" : undefined}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) =>
+            item.children ? (
+              <div key={item.href} className="nav-item">
+                <Link href={item.href} className={isActive(item.href, item.children) ? "active" : undefined}>
+                  {item.label}
+                </Link>
+                <div className="nav-dropdown">
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.href}
+                      href={child.href}
+                      className={pathname === child.href ? "active" : undefined}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={pathname === item.href ? "active" : undefined}
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
           <Button href={whatsappUrl("Olá, gostaria de falar com a equipe da PertenSer.")} variant="coral" external className="nav-cta-mobile">
             Falar com a equipe
           </Button>

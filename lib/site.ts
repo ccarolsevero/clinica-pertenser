@@ -25,12 +25,18 @@ export const whatsappUrl = (message?: string) => {
 
 export const nav = [
   { href: "/", label: "Início" },
-  { href: "/avaliacao-psicologica", label: "Avaliação Psicológica" },
-  { href: "/tdah-em-adultos", label: "TDAH em Adultos" },
-  { href: "/tea-em-adultos", label: "TEA em Adultos" },
+  {
+    href: "/avaliacao-psicologica",
+    label: "Avaliação Psicológica",
+    children: [
+      { href: "/tdah-em-adultos", label: "TDAH em Adultos" },
+      { href: "/tea-em-adultos", label: "TEA em Adultos" },
+    ],
+  },
+  { href: "/psicoterapia", label: "Psicoterapia" },
   { href: "/sobre", label: "Sobre" },
   { href: "/blog", label: "Blog" },
-] as const;
+];
 
 export const footerNav = [
   { href: "/", label: "Início" },
