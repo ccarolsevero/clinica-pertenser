@@ -502,7 +502,7 @@ h3 {
 }
 
 .portrait.portrait-sobre img {
-  object-position: 50% 18%;
+  object-position: 88% 18%;
 }
 
 .signature {
@@ -948,9 +948,9 @@ h3 {
     position: relative;
     inset: auto;
     width: 100%;
-    aspect-ratio: 3 / 4;
-    min-height: 320px;
-    max-height: 70vh;
+    aspect-ratio: 1 / 1;
+    min-height: 260px;
+    max-height: 48vh;
   }
 
   .hero-photo .container {

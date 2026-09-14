@@ -67,7 +67,7 @@ export default function SobrePage() {
       <section className="section">
         <div className="container split reverse">
           <PortraitSlot
-            src="/bruna-sobre.png"
+            src="/sobre-hero.png"
             alt="Bruna Kindlein, psicóloga e fundadora da Clínica PertenSer"
             className="portrait-sobre"
           />
