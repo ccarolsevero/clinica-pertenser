@@ -50,14 +50,16 @@ export default function AvaliacaoPage() {
   return (
     <>
       <section className="hero-photo">
-        <Image
-          src="/avaliacao-hero-aplicacao.png"
-          alt="Aplicação de avaliação psicológica com instrumento e escuta"
-          fill
-          priority
-          sizes="100vw"
-          className="hero-photo-image"
-        />
+        <div className="hero-photo-media">
+          <Image
+            src="/avaliacao-hero-bruna-jaleco.png"
+            alt="Bruna Kindlein, psicóloga responsável pela avaliação psicológica"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-image hero-photo-avaliacao"
+          />
+        </div>
         <div className="container">
           <div className="hero-photo-content">
             <p className="eyebrow">Avaliação psicológica para adultos</p>

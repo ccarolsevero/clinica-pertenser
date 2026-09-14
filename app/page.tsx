@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
@@ -11,9 +12,19 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div>
+      <section className="hero-photo">
+        <div className="hero-photo-media">
+          <Image
+            src="/home-hero.png"
+            alt="Bruna Kindlein, fundadora da Clínica PertenSer"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-image hero-photo-home"
+          />
+        </div>
+        <div className="container">
+          <div className="hero-photo-content">
             <p className="eyebrow">Avaliação psicológica de adultos</p>
             <h1>Entender o que acontece com você pode mudar a forma como você compreende toda a sua história.</h1>
             <div className="lead" style={{ marginTop: 24 }}>
@@ -31,9 +42,6 @@ export default function HomePage() {
               </Button>
             </div>
             <p className="support">Atendimento online em todo o Brasil.</p>
-          </div>
-          <div className="hero-brand">
-            <img src="/logo-pertenser.png" alt="PertenSer — Avaliação Psicológica" />
           </div>
         </div>
       </section>

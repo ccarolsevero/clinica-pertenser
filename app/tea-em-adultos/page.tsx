@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
@@ -48,17 +49,29 @@ const faqs = [
 export default function TeaPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="hero-photo">
+        <div className="hero-photo-media">
+          <Image
+            src="/tea-tdah-hero.png"
+            alt="Bruna Kindlein, psicóloga da Clínica PertenSer"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-image hero-photo-tea-tdah"
+          />
+        </div>
         <div className="container">
-          <p className="eyebrow">TEA em adultos</p>
-          <h1>Algumas respostas sobre o presente podem começar pela compreensão da sua história.</h1>
-          <p className="lead" style={{ marginTop: 24 }}>
-            A avaliação psicológica permite investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, considerando sua trajetória, seu funcionamento e as dificuldades vivenciadas no cotidiano.
-          </p>
-          <div className="actions">
-            <Button href="/avaliacao-psicologica">Quero conhecer a avaliação</Button>
+          <div className="hero-photo-content">
+            <p className="eyebrow">TEA em adultos</p>
+            <h1>Algumas respostas sobre o presente podem começar pela compreensão da sua história.</h1>
+            <p className="lead" style={{ marginTop: 24 }}>
+              A avaliação psicológica permite investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, considerando sua trajetória, seu funcionamento e as dificuldades vivenciadas no cotidiano.
+            </p>
+            <div className="actions">
+              <Button href="/avaliacao-psicologica">Quero conhecer a avaliação</Button>
+            </div>
+            <p className="support">Avaliação psicológica online para adultos em todo o Brasil.</p>
           </div>
-          <p className="support">Avaliação psicológica online para adultos em todo o Brasil.</p>
         </div>
       </section>
 

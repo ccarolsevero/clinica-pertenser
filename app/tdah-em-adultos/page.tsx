@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
@@ -48,17 +49,29 @@ const faqs = [
 export default function TdahPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="hero-photo">
+        <div className="hero-photo-media">
+          <Image
+            src="/tea-tdah-hero.png"
+            alt="Bruna Kindlein, psicóloga da Clínica PertenSer"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-image hero-photo-tea-tdah"
+          />
+        </div>
         <div className="container">
-          <p className="eyebrow">TDAH em adultos</p>
-          <h1>Investigar a possibilidade de TDAH é também compreender a sua história.</h1>
-          <p className="lead" style={{ marginTop: 24 }}>
-            A avaliação psicológica permite investigar a hipótese de TDAH na vida adulta considerando suas dificuldades, sua história de vida e seu funcionamento de forma ampla.
-          </p>
-          <div className="actions">
-            <Button href="/avaliacao-psicologica">Quero conhecer a avaliação</Button>
+          <div className="hero-photo-content">
+            <p className="eyebrow">TDAH em adultos</p>
+            <h1>Investigar a possibilidade de TDAH é também compreender a sua história.</h1>
+            <p className="lead" style={{ marginTop: 24 }}>
+              A avaliação psicológica permite investigar a hipótese de TDAH na vida adulta considerando suas dificuldades, sua história de vida e seu funcionamento de forma ampla.
+            </p>
+            <div className="actions">
+              <Button href="/avaliacao-psicologica">Quero conhecer a avaliação</Button>
+            </div>
+            <p className="support">Avaliação psicológica online para adultos em todo o Brasil.</p>
           </div>
-          <p className="support">Avaliação psicológica online para adultos em todo o Brasil.</p>
         </div>
       </section>
 

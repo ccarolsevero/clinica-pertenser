@@ -501,6 +501,10 @@ h3 {
   object-position: 50% 12%;
 }
 
+.portrait.portrait-sobre img {
+  object-position: 50% 18%;
+}
+
 .signature {
   margin-top: 28px;
   padding-top: 24px;
@@ -815,15 +819,42 @@ h3 {
   background: var(--cream);
 }
 
+.hero-photo-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
 .hero-photo-image {
   object-fit: cover;
   object-position: right top;
+}
+
+.hero-photo-home {
+  object-position: 78% 8%;
+}
+
+.hero-photo-avaliacao {
+  object-position: 82% 12%;
+}
+
+.hero-photo-contato {
+  object-position: 80% 10%;
+}
+
+.hero-photo-tea-tdah {
+  object-position: 84% 8%;
+}
+
+.hero-photo-sobre {
+  object-position: right center;
 }
 
 .hero-photo::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     90deg,
     rgba(246, 241, 232, 0.94) 0%,
@@ -836,7 +867,7 @@ h3 {
 
 .hero-photo .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 64px;
@@ -907,12 +938,24 @@ h3 {
   }
 
   .hero-photo {
-    min-height: 72vh;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-photo-media {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    min-height: 320px;
+    max-height: 70vh;
   }
 
   .hero-photo .container {
-    min-height: 72vh;
-    align-items: flex-end;
+    min-height: 0;
+    align-items: start;
   }
 
   .hero-photo-image {
@@ -920,16 +963,11 @@ h3 {
   }
 
   .hero-photo::after {
-    background: linear-gradient(
-      180deg,
-      rgba(246, 241, 232, 0.18) 0%,
-      rgba(246, 241, 232, 0.55) 42%,
-      rgba(246, 241, 232, 0.94) 78%
-    );
+    display: none;
   }
 
   .hero-photo-content {
-    padding: 48px 0 56px;
+    padding: 32px 0 48px;
     max-width: none;
   }
 

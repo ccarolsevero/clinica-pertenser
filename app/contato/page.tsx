@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { teamMessage } from "@/lib/content";
 import { site } from "@/lib/site";
@@ -12,19 +13,31 @@ export const metadata: Metadata = {
 export default function ContatoPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="hero-photo">
+        <div className="hero-photo-media">
+          <Image
+            src="/contato-hero.png"
+            alt="Bruna Kindlein, fundadora da Clínica PertenSer"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-image hero-photo-contato"
+          />
+        </div>
         <div className="container">
-          <p className="eyebrow">Fale com a PertenSer</p>
-          <h1>Vamos conversar sobre o que você está buscando?</h1>
-          <p className="lead" style={{ marginTop: 24 }}>
-            Entre em contato com a equipe da PertenSer para saber mais sobre avaliação psicológica, psicoterapia e os próximos passos para o atendimento.
-          </p>
-          <div className="actions">
-            <Button href={teamMessage} variant="coral" external>
-              Falar pelo WhatsApp
-            </Button>
+          <div className="hero-photo-content">
+            <p className="eyebrow">Fale com a PertenSer</p>
+            <h1>Vamos conversar sobre o que você está buscando?</h1>
+            <p className="lead" style={{ marginTop: 24 }}>
+              Entre em contato com a equipe da PertenSer para saber mais sobre avaliação psicológica, psicoterapia e os próximos passos para o atendimento.
+            </p>
+            <div className="actions">
+              <Button href={teamMessage} variant="coral" external>
+                Falar pelo WhatsApp
+              </Button>
+            </div>
+            <p className="support">Atendimento online para adultos.</p>
           </div>
-          <p className="support">Atendimento online para adultos.</p>
         </div>
       </section>
 

@@ -17,14 +17,16 @@ export default function BlogPage() {
   return (
     <>
       <section className="hero-photo">
-        <Image
-          src="/bruna-blog-hero.png"
-          alt="Bruna Kindlein, psicóloga da Clínica PertenSer"
-          fill
-          priority
-          sizes="100vw"
-          className="hero-photo-image"
-        />
+        <div className="hero-photo-media">
+          <Image
+            src="/bruna-blog-hero.png"
+            alt="Bruna Kindlein, psicóloga da Clínica PertenSer"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-photo-image"
+          />
+        </div>
         <div className="container">
           <div className="hero-photo-content">
             <p className="eyebrow">Conteúdos PertenSer</p>
