@@ -32,39 +32,15 @@ export default function SobrePage() {
             <h1>Uma clínica criada para olhar além de um diagnóstico.</h1>
             <div className="lead" style={{ marginTop: 24 }}>
               <p>
-                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TDAH e Transtorno do Espectro Autista (TEA).
+                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco na investigação de TDAH e Transtorno do Espectro Autista (TEA).
               </p>
-              <p>
-                Nosso trabalho une rigor técnico e um olhar individualizado para compreender cada pessoa para além de sintomas isolados.
-              </p>
+              <p>O trabalho une rigor técnico, escuta e um olhar individualizado para cada caso.</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="section alt">
-        <div className="container">
-          <div className="section-head">
-            <h2>Um diagnóstico pode trazer respostas. Mas uma boa avaliação precisa compreender a história por trás delas.</h2>
-            <div className="lead" style={{ marginTop: 20 }}>
-              <p>
-                A PertenSer nasceu da ideia de que avaliar não é apenas confirmar ou descartar uma hipótese.
-              </p>
-              <p>
-                Cada processo considera a história de vida, o funcionamento atual e diferentes possibilidades que possam explicar as dificuldades apresentadas.
-              </p>
-              <p>
-                Por isso, além da hipótese inicial, também podem ser investigados diagnósticos diferenciais e possíveis condições associadas.
-              </p>
-            </div>
-            <p className="quote">
-              Nosso objetivo é transformar os resultados da avaliação em respostas claras e que façam sentido para a vida de cada pessoa.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="container split reverse">
           <PortraitSlot
             src="/home-hero.png"
@@ -76,20 +52,18 @@ export default function SobrePage() {
             <h2>{site.responsible.shortName}</h2>
             <div className="lead" style={{ marginTop: 24 }}>
               <p>
-                Psicóloga e especialista em Neuropsicologia, Bruna Kindlein é fundadora e responsável técnica pela Clínica PertenSer.
+                Bruna Kindlein é psicóloga, pós-graduada em Neuropsicologia, fundadora e responsável técnica da Clínica PertenSer.
               </p>
               <p>
-                Sua trajetória é marcada pelo trabalho com adultos e pela avaliação psicológica, especialmente na investigação de TEA e TDAH, além da experiência na supervisão de outros profissionais.
+                Sua atuação é voltada ao trabalho com adultos e à avaliação psicológica, especialmente na investigação de TDAH e TEA. Também possui experiência na supervisão de outros profissionais.
               </p>
               <p>
-                A PertenSer nasceu dessa trajetória e da proposta de oferecer avaliações cuidadosas, individualizadas e tecnicamente fundamentadas.
+                A PertenSer nasceu dessa trajetória e da proposta de oferecer um trabalho tecnicamente fundamentado, cuidadoso e próximo.
               </p>
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
-              {site.responsible.role}
-              <br />
-              {site.responsible.specialty}
+              {site.responsible.credentials}
               <br />
               {site.responsible.title}
             </p>
@@ -100,9 +74,9 @@ export default function SobrePage() {
       <section className="section green">
         <div className="container">
           <div className="section-head">
-            <h2>A PertenSer é uma clínica construída para cuidar de cada processo com atenção.</h2>
+            <h2>Um trabalho construído em equipe.</h2>
             <p className="lead" style={{ marginTop: 20 }}>
-              A clínica conta com uma equipe envolvida nos processos de avaliação, conduzidos com rigor técnico, supervisão e atenção às particularidades de cada caso.
+              A PertenSer conta com uma equipe envolvida nos processos da clínica, com acompanhamento da responsável técnica e cuidado em cada etapa do atendimento.
             </p>
             <p className="quote light">Rigor para investigar. Clareza para orientar. Cuidado para compreender.</p>
           </div>
@@ -110,8 +84,8 @@ export default function SobrePage() {
       </section>
 
       <CTA
-        title="Talvez o que você esteja buscando não seja apenas um diagnóstico, mas uma forma de compreender melhor a sua história."
-        text="Conheça a avaliação psicológica da PertenSer e entenda como funciona o processo."
+        title="Conheça o trabalho da PertenSer."
+        text="Saiba mais sobre a avaliação psicológica ou converse com a equipe para esclarecer suas dúvidas."
         support="Atendimento online para adultos em todo o Brasil."
         primary={{ href: "/avaliacao-psicologica", label: "Conheça a avaliação psicológica" }}
         secondary={{ href: teamMessage, label: "Falar com a equipe", external: true }}
