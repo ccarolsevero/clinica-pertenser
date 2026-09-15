@@ -61,12 +61,12 @@ export function Header() {
             ),
           )}
           <Button href={whatsappUrl("Olá, gostaria de falar com a equipe da PertenSer.")} variant="coral" external className="nav-cta-mobile">
-            Falar com a equipe
+            Fale conosco
           </Button>
         </nav>
 
         <Button href={whatsappUrl("Olá, gostaria de falar com a equipe da PertenSer.")} variant="coral" external className="nav-cta-desktop">
-          Falar com a equipe
+          Fale conosco
         </Button>
 
         <button
