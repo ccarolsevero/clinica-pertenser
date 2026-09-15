@@ -29,10 +29,10 @@ export default function HomePage() {
             <h1>Entender o que acontece com você pode mudar a forma como você compreende toda a sua história.</h1>
             <div className="lead" style={{ marginTop: 24 }}>
               <p>
-                Avaliação psicológica online para adultos, com foco na investigação de TDAH, Transtorno do Espectro Autista (TEA) e diagnósticos diferenciais.
+                Avaliação psicológica com foco na investigação de TDAH, Transtorno do Espectro Autista (TEA) e diagnósticos diferenciais.
               </p>
               <p>
-                Um processo cuidadoso para compreender o que pode estar por trás das dificuldades que você vivencia.
+                Um processo individualizado para compreender diferentes hipóteses e os fatores relacionados ao funcionamento de cada pessoa.
               </p>
             </div>
             <div className="actions">
@@ -54,36 +54,18 @@ export default function HomePage() {
           </div>
           <div className="cards">
             <article className="card">
-              <h3>Avaliação psicológica</h3>
+              <h3>Avaliação psicológica para adultos</h3>
               <p>
-                Um processo de investigação que considera sua história, seu funcionamento e diferentes hipóteses para compreender o que pode explicar as dificuldades apresentadas.
+                Investigação de TDAH, TEA e diagnósticos diferenciais para uma compreensão ampla do funcionamento de cada pessoa.
               </p>
               <Button href="/avaliacao-psicologica" variant="secondary">
-                Conheça a avaliação
+                Conheça a avaliação psicológica
               </Button>
             </article>
             <article className="card">
-              <h3>TDAH em adultos</h3>
+              <h3>Psicoterapia para adultos</h3>
               <p>
-                Avaliação psicológica para adultos que desejam investigar a possibilidade de TDAH e compreender melhor seu funcionamento e os impactos das dificuldades no cotidiano.
-              </p>
-              <Button href="/tdah-em-adultos" variant="secondary">
-                Saiba mais
-              </Button>
-            </article>
-            <article className="card">
-              <h3>TEA em adultos</h3>
-              <p>
-                Avaliação psicológica para adultos que desejam investigar a possibilidade de Transtorno do Espectro Autista e compreender características presentes ao longo da própria história.
-              </p>
-              <Button href="/tea-em-adultos" variant="secondary">
-                Saiba mais
-              </Button>
-            </article>
-            <article className="card">
-              <h3>Psicoterapia</h3>
-              <p>
-                Acompanhamento psicológico online para adultos, realizado de forma individualizada de acordo com as necessidades de cada pessoa.
+                Atendimento psicológico online e individualizado, de acordo com as necessidades e objetivos de cada pessoa.
               </p>
               <Button href="/psicoterapia" variant="secondary">
                 Conheça a psicoterapia
@@ -97,18 +79,15 @@ export default function HomePage() {
         <div className="container split">
           <div>
             <p className="eyebrow">Sobre nós</p>
-            <h2>Mais do que buscar um diagnóstico, buscamos compreender a sua história.</h2>
+            <h2>Uma avaliação vai além de uma única hipótese.</h2>
           </div>
           <div>
             <div className="lead">
               <p>
-                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TDAH e TEA.
+                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco na investigação de TDAH e TEA.
               </p>
               <p>
-                Acreditamos que uma boa avaliação não deve se limitar a confirmar ou descartar um diagnóstico.
-              </p>
-              <p>
-                Por isso, cada processo considera a história de vida, o funcionamento atual e diferentes hipóteses que possam ajudar a compreender as dificuldades de cada pessoa.
+                O processo considera diferentes hipóteses, diagnósticos diferenciais e possíveis condições associadas para uma compreensão mais ampla de cada caso.
               </p>
             </div>
             <div className="actions">
