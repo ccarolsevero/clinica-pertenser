@@ -16,33 +16,30 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Preciso de encaminhamento médico?",
-    answer:
-      "Não. Você pode procurar a avaliação por iniciativa própria caso tenha dúvidas sobre seu funcionamento ou queira investigar alguma hipótese.",
+    answer: "Não. A avaliação pode ser procurada por iniciativa própria.",
   },
   {
-    question: "E se a avaliação não confirmar TDAH ou TEA?",
+    question: "E se a hipótese de TDAH ou TEA não for confirmada?",
     answer:
-      "O objetivo é compreender o que melhor explica as dificuldades apresentadas. Mesmo quando a hipótese inicial não é confirmada, os resultados podem ajudar na compreensão do seu funcionamento e orientar os próximos cuidados.",
+      "A avaliação considera diferentes hipóteses para compreender o que melhor explica as questões apresentadas.",
   },
   {
-    question: "Quanto tempo dura a avaliação?",
-    answer:
-      "A duração pode variar conforme cada caso. Em média, o processo acontece ao longo de 8 sessões.",
+    question: "Quanto tempo dura?",
+    answer: "Em média, 8 sessões, podendo variar conforme cada caso.",
   },
   {
     question: "Vou receber um laudo?",
     answer:
-      "Sim. Ao final, é realizada uma devolutiva e entregue o laudo psicológico correspondente à avaliação realizada.",
+      "Sim. Ao final, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação.",
   },
   {
     question: "A avaliação é online?",
-    answer:
-      "Sim. O processo é realizado online. Caso seja necessário algum procedimento complementar presencial, você será orientado.",
+    answer: "Sim. A PertenSer atende adultos de todo o Brasil de forma online.",
   },
   {
     question: "Vocês atendem por convênio?",
     answer:
-      "Não trabalhamos diretamente com convênios. Dependendo do seu plano, pode existir a possibilidade de solicitar reembolso. A equipe pode fornecer a documentação referente ao serviço realizado para que você consulte essa possibilidade junto ao seu convênio.",
+      "O atendimento é particular. Dependendo do plano, pode haver possibilidade de reembolso. A equipe fornece a documentação referente ao serviço realizado.",
   },
 ];
 
