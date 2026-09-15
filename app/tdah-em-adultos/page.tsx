@@ -157,7 +157,6 @@ export default function TdahPage() {
         title="Quer compreender melhor o que pode estar por trás das suas dificuldades?"
         text="Se você deseja investigar a possibilidade de TDAH, converse com a equipe da PertenSer para entender como funciona a avaliação e quais são os próximos passos."
         support="Avaliação psicológica online para adultos em todo o Brasil."
-        showWhatsapp
       />
     </>
   );

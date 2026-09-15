@@ -1,11 +1,10 @@
-import { site, whatsappUrl } from "@/lib/site";
+import { whatsappUrl } from "@/lib/site";
 import { Button } from "./Button";
 
 type Props = {
   title: string;
   text: string;
   support?: string;
-  showWhatsapp?: boolean;
   primary?: { href: string; label: string; external?: boolean };
   secondary?: { href: string; label: string; external?: boolean };
 };
@@ -14,7 +13,6 @@ export function CTA({
   title,
   text,
   support,
-  showWhatsapp,
   primary = {
     href: whatsappUrl("Olá, gostaria de falar com a equipe da PertenSer."),
     label: "Falar com a equipe da PertenSer",
@@ -38,7 +36,6 @@ export function CTA({
           ) : null}
         </div>
         {support ? <p className="support">{support}</p> : null}
-        {showWhatsapp ? <p className="support">WhatsApp: {site.whatsappDisplay}</p> : null}
       </div>
     </section>
   );

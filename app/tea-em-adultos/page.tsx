@@ -166,7 +166,6 @@ export default function TeaPage() {
         title="Quer investigar a possibilidade de TEA na vida adulta?"
         text="Converse com a equipe da PertenSer para entender como funciona a avaliação psicológica e quais são os próximos passos."
         support="Avaliação psicológica online para adultos em todo o Brasil."
-        showWhatsapp
       />
     </>
   );

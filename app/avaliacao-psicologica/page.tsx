@@ -244,7 +244,6 @@ export default function AvaliacaoPage() {
         title="Você não precisa ter todas as respostas para começar."
         text="Se você tem dúvidas sobre seu funcionamento ou deseja investigar alguma hipótese, converse com a equipe da PertenSer para entender como funciona a avaliação psicológica e quais são os próximos passos."
         support="Atendimento online para adultos em todo o Brasil."
-        showWhatsapp
       />
     </>
   );
