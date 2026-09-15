@@ -57,6 +57,21 @@ export const teaProcess = [
   },
 ];
 
+export const therapyProcess = [
+  {
+    title: "Primeiro contato",
+    text: "A equipe esclarece dúvidas e orienta sobre o atendimento.",
+  },
+  {
+    title: "Primeira sessão",
+    text: "Um primeiro espaço para compreender o momento atual e as questões que motivaram a busca pela psicoterapia.",
+  },
+  {
+    title: "Acompanhamento",
+    text: "As sessões acontecem online e o processo é construído de acordo com as necessidades de cada pessoa.",
+  },
+];
+
 export const teamMessage = whatsappUrl(
   "Olá, gostaria de falar com a equipe da PertenSer."
 );
