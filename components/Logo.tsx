@@ -17,6 +17,7 @@ export function Logo({ className = "logo", width = 210, height = 119, priority }
         width={width}
         height={height}
         priority={priority}
+        quality={90}
       />
     </Link>
   );

@@ -16,6 +16,7 @@ export function PortraitSlot({
         alt={alt}
         fill
         sizes="(max-width: 980px) 90vw, 420px"
+        quality={90}
       />
     </figure>
   );

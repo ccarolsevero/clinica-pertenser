@@ -56,6 +56,7 @@ export default function TeaPage() {
             fill
             priority
             sizes="100vw"
+            quality={90}
             className="hero-photo-image hero-photo-tea"
           />
         </div>

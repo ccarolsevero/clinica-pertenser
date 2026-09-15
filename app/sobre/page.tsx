@@ -31,8 +31,10 @@ export default function SobrePage() {
             <Image
               src="/logo-pertenser.png"
               alt="Clínica PertenSer"
-              width={899}
-              height={496}
+              width={1798}
+              height={992}
+              sizes="(max-width: 980px) 70vw, 440px"
+              quality={90}
               priority
             />
           </div>

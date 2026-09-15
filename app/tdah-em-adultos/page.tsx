@@ -51,6 +51,7 @@ export default function TdahPage() {
             fill
             priority
             sizes="100vw"
+            quality={90}
             className="hero-photo-image hero-photo-tea-tdah"
           />
         </div>
