@@ -66,10 +66,10 @@ export default function AvaliacaoPage() {
             <h1>Compreender o que acontece com você vai além de encontrar um diagnóstico.</h1>
             <div className="lead" style={{ marginTop: 24 }}>
               <p>
-                A avaliação psicológica é um processo de investigação que considera sua história, seu funcionamento e as dificuldades que você vivencia.
+                A avaliação psicológica é um processo de investigação que integra diferentes informações para compreender aspectos cognitivos, emocionais e comportamentais.
               </p>
               <p>
-                Na PertenSer, o foco principal é a investigação de TDAH e Transtorno do Espectro Autista (TEA) em adultos, considerando também diagnósticos diferenciais e possíveis condições associadas.
+                Na PertenSer, o foco está na avaliação de adultos, especialmente na investigação de TDAH, TEA e diagnósticos diferenciais.
               </p>
             </div>
             <div className="actions">
@@ -105,29 +105,25 @@ export default function AvaliacaoPage() {
             <p className="eyebrow">O que consideramos</p>
             <h2>Uma avaliação não se resume a uma lista de sintomas.</h2>
             <p className="lead" style={{ marginTop: 20 }}>
-              Dificuldades semelhantes podem ter explicações diferentes. Por isso, o processo considera diferentes aspectos da sua história e do seu funcionamento.
+              Dificuldades semelhantes podem ter diferentes explicações. Por isso, a avaliação considera diferentes aspectos do desenvolvimento e do funcionamento de cada pessoa.
             </p>
           </div>
           <div className="cards">
             <article className="card quiet">
-              <p className="index">História</p>
-              <h3>História de vida</h3>
-              <p>Características, experiências e dificuldades presentes ao longo da sua trajetória.</p>
+              <h3>Desenvolvimento e trajetória</h3>
+              <p>Características e dificuldades observadas ao longo da vida.</p>
             </article>
             <article className="card quiet">
-              <p className="index">Presente</p>
               <h3>Funcionamento atual</h3>
-              <p>Aspectos cognitivos, emocionais e comportamentais e seus impactos no cotidiano.</p>
+              <p>Aspectos cognitivos, emocionais e comportamentais presentes no cotidiano.</p>
             </article>
             <article className="card quiet">
-              <p className="index">Hipótese</p>
               <h3>Hipótese inicial</h3>
-              <p>Investigação das questões que motivaram a procura, especialmente suspeitas de TDAH e TEA.</p>
+              <p>Questões que motivaram a procura pela avaliação.</p>
             </article>
             <article className="card quiet">
-              <p className="index">Amplitude</p>
-              <h3>Outras possibilidades</h3>
-              <p>Diagnósticos diferenciais e possíveis condições associadas que possam contribuir para a compreensão do caso.</p>
+              <h3>Diagnósticos diferenciais</h3>
+              <p>Outras hipóteses e possíveis condições associadas relevantes para a compreensão do caso.</p>
             </article>
           </div>
         </div>
@@ -139,10 +135,10 @@ export default function AvaliacaoPage() {
             <h2>A hipótese é o ponto de partida, não uma conclusão.</h2>
             <div className="lead" style={{ marginTop: 20 }}>
               <p>
-                É comum chegar à avaliação com a suspeita de TDAH ou autismo. Essa hipótese será investigada, mas não determina o resultado.
+                É comum iniciar uma avaliação a partir da suspeita de TDAH ou autismo. Essa hipótese orienta a investigação, mas não determina o resultado.
               </p>
               <p>
-                Na PertenSer, buscamos compreender o que melhor explica as dificuldades apresentadas, considerando as diferentes informações reunidas ao longo do processo.
+                O processo considera diferentes possibilidades para construir uma compreensão tecnicamente fundamentada de cada caso.
               </p>
             </div>
             <p className="quote light">
