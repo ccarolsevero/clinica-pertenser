@@ -15,19 +15,9 @@ export const metadata: Metadata = {
 export default function SobrePage() {
   return (
     <>
-      <section className="hero-photo">
-        <div className="hero-photo-media">
-          <Image
-            src="/home-hero.png"
-            alt="Bruna Kindlein, fundadora da Clínica PertenSer"
-            fill
-            priority
-            sizes="100vw"
-            className="hero-photo-image hero-photo-home"
-          />
-        </div>
-        <div className="container">
-          <div className="hero-photo-content">
+      <section className="page-hero">
+        <div className="container hero-grid">
+          <div>
             <p className="eyebrow">Sobre a PertenSer</p>
             <h1>Uma clínica criada para olhar além de um diagnóstico.</h1>
             <div className="lead" style={{ marginTop: 24 }}>
@@ -37,13 +27,22 @@ export default function SobrePage() {
               <p>O trabalho une rigor técnico, escuta e um olhar individualizado para cada caso.</p>
             </div>
           </div>
+          <div className="hero-brand">
+            <Image
+              src="/logo-pertenser.png"
+              alt="Clínica PertenSer"
+              width={899}
+              height={496}
+              priority
+            />
+          </div>
         </div>
       </section>
 
       <section className="section alt">
         <div className="container split reverse">
           <PortraitSlot
-            src="/home-hero.png"
+            src="/bruna-sobre.png"
             alt="Bruna Kindlein, psicóloga e fundadora da Clínica PertenSer"
             className="portrait-sobre"
           />
