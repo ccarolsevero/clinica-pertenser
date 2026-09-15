@@ -156,7 +156,7 @@ export default function AvaliacaoPage() {
           </div>
           <ProcessSteps
             steps={evaluationProcess}
-            note="Cada avaliação é individualizada e sua duração pode variar. Em média, o processo acontece ao longo de 8 sessões."
+            note="Em média, o processo acontece ao longo de 8 sessões, podendo variar conforme as necessidades de cada caso."
           />
         </div>
       </section>

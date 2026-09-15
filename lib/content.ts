@@ -2,20 +2,20 @@ import { whatsappUrl } from "./site";
 
 export const evaluationProcess = [
   {
-    title: "Entrevista e história de vida",
-    text: "Começamos compreendendo o que levou você a buscar a avaliação, sua história e as dificuldades presentes atualmente.",
+    title: "Entrevista inicial",
+    text: "Compreensão do motivo da procura, do desenvolvimento e das dificuldades atuais.",
   },
   {
-    title: "Processo de investigação",
-    text: "Ao longo dos encontros, podem ser realizadas entrevistas, aplicação de instrumentos psicológicos e coleta de informações complementares. Quando necessário, também podem ser consideradas informações de familiares ou pessoas próximas.",
+    title: "Investigação",
+    text: "Entrevistas, instrumentos psicológicos e informações complementares de acordo com cada caso.",
   },
   {
-    title: "Análise dos resultados",
-    text: "As informações são analisadas de forma integrada, considerando a hipótese inicial e outras possibilidades relevantes para o caso.",
+    title: "Análise",
+    text: "Integração das informações obtidas e investigação das hipóteses relevantes.",
   },
   {
     title: "Devolutiva e laudo",
-    text: "Ao final, é realizada uma devolutiva para explicar os resultados e as orientações, além da entrega do laudo psicológico correspondente à avaliação realizada.",
+    text: "Apresentação dos resultados, entrega do laudo psicológico e orientações pertinentes.",
   },
 ];
 
