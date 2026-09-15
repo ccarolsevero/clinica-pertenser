@@ -14,6 +14,7 @@ export const site = {
     role: "Psicóloga | CRP 07/31496",
     credentials: "Psicóloga | Pós-graduada em Neuropsicologia | CRP 07/31496",
     title: "Fundadora e responsável técnica da Clínica PertenSer",
+    founder: "Fundadora e responsável técnica",
   },
 } as const;
 
@@ -37,15 +38,3 @@ export const nav = [
   { href: "/sobre", label: "Sobre" },
   { href: "/blog", label: "Blog" },
 ];
-
-export const footerNav = [
-  { href: "/", label: "Início" },
-  { href: "/avaliacao-psicologica", label: "Avaliação Psicológica" },
-  { href: "/tdah-em-adultos", label: "TDAH em Adultos" },
-  { href: "/tea-em-adultos", label: "TEA em Adultos" },
-  { href: "/psicoterapia", label: "Psicoterapia" },
-  { href: "/sobre", label: "Sobre" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contato", label: "Contato" },
-  { href: "/politica-de-privacidade", label: "Política de Privacidade" },
-] as const;

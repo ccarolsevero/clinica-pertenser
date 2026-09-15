@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { footerNav, site } from "@/lib/site";
+import { site, whatsappUrl } from "@/lib/site";
+import { Button } from "./Button";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -11,48 +12,34 @@ export function Footer() {
             <Logo className="logo-plate" width={240} height={136} />
             <p>{site.tagline}</p>
             <p className="signature">
-              <strong>Responsável técnica</strong>
-              {site.responsible.name}
+              <strong>{site.responsible.name}</strong>
+              {site.responsible.credentials}
               <br />
-              {site.responsible.role}
+              {site.responsible.founder}
             </p>
           </div>
 
-          <div>
-            <h4>Contato</h4>
-            <ul>
-              <li>
-                WhatsApp:{" "}
-                <a href={`https://wa.me/${site.whatsapp}`} target="_blank" rel="noreferrer">
-                  {site.whatsappDisplay}
-                </a>
-              </li>
-              <li>
-                E-mail:{" "}
-                <a href={`mailto:${site.email}`}>{site.email}</a>
-              </li>
-              <li>
-                Instagram:{" "}
-                <a href={site.instagramUrl} target="_blank" rel="noreferrer">
-                  @{site.instagram}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4>Links</h4>
-            <ul>
-              {footerNav.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href}>{item.label}</Link>
-                </li>
-              ))}
-            </ul>
+          <div className="footer-contact">
+            <h3>Contato</h3>
+            <div className="footer-contact-actions">
+              <Button href={whatsappUrl()} variant="coral" external>
+                WhatsApp
+              </Button>
+              <Button href={`mailto:${site.email}`} variant="light">
+                E-mail
+              </Button>
+              <Button href={site.instagramUrl} variant="ghost" external>
+                Instagram
+              </Button>
+            </div>
           </div>
         </div>
         <div className="footer-bottom">
-          © {new Date().getFullYear()} Clínica PertenSer. Todos os direitos reservados.
+          <span>
+            © {new Date().getFullYear()} Clínica PertenSer. Todos os direitos
+            reservados.
+          </span>
+          <Link href="/politica-de-privacidade">Política de Privacidade</Link>
         </div>
       </div>
     </footer>

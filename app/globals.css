@@ -3,12 +3,14 @@
   --cream-deep: #ebe3d4;
   --paper: #f8f2e6;
   --ink: #1a2422;
-  --muted: #5f6b67;
+  --muted: #586460;
   --line: #e0d6c6;
   --green: #26382f;
   --green-deep: #17241e;
   --green-soft: #3a4d43;
   --coral: #c55e62;
+  /* Tom mais fechado do coral, com contraste suficiente para texto branco. */
+  --coral-solid: #b55055;
   --coral-deep: #a8484d;
   --burgundy: #8e3a45;
   --white: #ffffff;
@@ -121,6 +123,15 @@ h3 {
   color: var(--paper);
 }
 
+/* Seção verde colada ao CTA: sem troca de fundo, o respiro das duas soma e vira vazio. */
+.section.green:has(+ .cta-band) {
+  padding-bottom: 64px;
+}
+
+.section.green + .cta-band {
+  padding-top: 0;
+}
+
 .section.green h2,
 .section.green h3 {
   color: var(--paper);
@@ -166,7 +177,8 @@ h3 {
   font-size: 0.95rem;
 }
 
-.section.green .support {
+.section.green .support,
+.cta-band .support {
   color: rgba(251, 248, 243, 0.72);
 }
 
@@ -207,7 +219,7 @@ h3 {
 }
 
 .btn-coral {
-  background: var(--coral);
+  background: var(--coral-solid);
   color: white;
 }
 
@@ -619,12 +631,14 @@ h3 {
   margin-bottom: 4px;
 }
 
-.section.green .signature {
+.section.green .signature,
+.footer .signature {
   border-top-color: rgba(251, 248, 243, 0.16);
   color: rgba(251, 248, 243, 0.78);
 }
 
-.section.green .signature strong {
+.section.green .signature strong,
+.footer .signature strong {
   color: var(--paper);
 }
 
@@ -826,13 +840,13 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr 0.9fr;
-  gap: 48px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px 64px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(251, 248, 243, 0.12);
+  align-items: start;
 }
 
-.footer h3,
 .footer .logo strong {
   color: var(--paper);
 }
@@ -846,7 +860,7 @@ h3 {
   max-width: 36ch;
 }
 
-.footer h4 {
+.footer h3 {
   color: var(--paper);
   font-size: 0.78rem;
   letter-spacing: 0.16em;
@@ -855,19 +869,44 @@ h3 {
   font-weight: 650;
 }
 
-.footer a:hover {
+.footer a:not(.btn):hover {
   color: var(--paper);
 }
 
-.footer ul {
-  list-style: none;
-  display: grid;
-  gap: 8px;
+.footer-contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  max-width: 280px;
+}
+
+.footer-contact-actions .btn {
+  width: 100%;
+}
+
+.footer .signature {
+  max-width: 46ch;
 }
 
 .footer-bottom {
   padding-top: 24px;
   font-size: 0.88rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  align-items: center;
+}
+
+.footer-bottom a {
+  color: rgba(251, 248, 243, 0.72);
+}
+
+.footer-bottom a:hover {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .whatsapp-float {

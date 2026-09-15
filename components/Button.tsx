@@ -27,9 +27,15 @@ export function Button({
 }: Props) {
   const classes = [variants[variant], className].filter(Boolean).join(" ");
 
-  if (external) {
+  const isMailOrTel = href.startsWith("mailto:") || href.startsWith("tel:");
+
+  if (external || isMailOrTel) {
     return (
-      <a href={href} className={classes} target="_blank" rel="noreferrer">
+      <a
+        href={href}
+        className={classes}
+        {...(!isMailOrTel ? { target: "_blank", rel: "noreferrer" } : {})}
+      >
         {children}
       </a>
     );
