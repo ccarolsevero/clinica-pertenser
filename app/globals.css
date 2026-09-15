@@ -135,15 +135,6 @@ h3 {
   margin-bottom: 56px;
 }
 
-.section-head.center {
-  margin-inline: auto;
-  text-align: center;
-}
-
-.section-head.center .lead {
-  margin-inline: auto;
-}
-
 .quote {
   margin-top: 36px;
   padding: 28px 32px;
@@ -752,22 +743,16 @@ h3 {
   background: var(--green);
   color: var(--paper);
   padding: 96px 0;
-  text-align: center;
 }
 
 .cta-band h2 {
   color: var(--paper);
   max-width: 22ch;
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
 }
 
 .cta-band .lead {
-  margin-inline: auto;
   color: rgba(251, 248, 243, 0.82);
-}
-
-.cta-band .actions {
-  justify-content: center;
 }
 
 .footer {
