@@ -20,6 +20,7 @@ export default function HomePage() {
             fill
             priority
             sizes="100vw"
+            quality={90}
             className="hero-photo-image hero-photo-home"
           />
         </div>
@@ -136,7 +137,7 @@ export default function HomePage() {
             <h2>{site.responsible.shortName}</h2>
             <div className="lead" style={{ marginTop: 24 }}>
               <p>
-                Psicóloga e especialista em Neuropsicologia, Bruna Kindlein é fundadora e responsável técnica pela Clínica PertenSer.
+                Psicóloga e pós-graduada em Neuropsicologia, Bruna Kindlein é fundadora e responsável técnica pela Clínica PertenSer.
               </p>
               <p>
                 Sua trajetória é marcada pelo trabalho com adultos e pela avaliação psicológica, especialmente na investigação de TEA e TDAH, além da experiência na supervisão de outros profissionais.
@@ -144,9 +145,9 @@ export default function HomePage() {
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
-              {site.responsible.role}
+              {site.responsible.credentials}
               <br />
-              {site.responsible.specialty}
+              Fundadora e responsável técnica
             </p>
             <div className="actions">
               <Button href="/sobre">Conheça a PertenSer</Button>
