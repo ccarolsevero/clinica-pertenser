@@ -21,20 +21,20 @@ export const evaluationProcess = [
 
 export const tdahProcess = [
   {
-    title: "Entrevista e história de vida",
-    text: "Compreendemos o que motivou a busca pela avaliação, suas dificuldades atuais e aspectos importantes da sua história.",
+    title: "Entrevista inicial",
+    text: "Compreensão das dificuldades atuais, do desenvolvimento e dos motivos que levaram à investigação de TDAH.",
   },
   {
     title: "Investigação",
-    text: "Ao longo dos encontros, são reunidas informações por meio de entrevistas, instrumentos psicológicos e, quando necessário, informações complementares.",
+    text: "Entrevistas, instrumentos psicológicos e informações complementares relevantes para cada caso.",
   },
   {
     title: "Análise",
-    text: "As informações são analisadas de forma integrada, considerando a hipótese de TDAH e outras possibilidades relevantes para o caso.",
+    text: "Integração das informações, considerando a hipótese de TDAH, diagnósticos diferenciais e possíveis condições associadas.",
   },
   {
     title: "Devolutiva e laudo",
-    text: "Ao final, você recebe uma devolutiva com a explicação dos resultados e orientações, além do laudo psicológico correspondente à avaliação realizada.",
+    text: "Apresentação dos resultados, entrega do laudo psicológico e orientações pertinentes.",
   },
 ];
 

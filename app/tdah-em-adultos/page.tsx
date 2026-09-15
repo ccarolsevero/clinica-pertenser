@@ -16,33 +16,26 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Preciso ter certeza de que tenho TDAH?",
-    answer:
-      "Não. A avaliação existe justamente para investigar essa hipótese e compreender o que pode explicar as dificuldades apresentadas.",
+    answer: "Não. A avaliação existe justamente para investigar essa possibilidade.",
   },
   {
-    question: "E se a avaliação não confirmar TDAH?",
+    question: "E se a hipótese de TDAH não for confirmada?",
     answer:
-      "Mesmo quando a hipótese inicial não é confirmada, os resultados podem ajudar a compreender melhor seu funcionamento e orientar os próximos cuidados.",
-  },
-  {
-    question: "Outras possibilidades também são investigadas?",
-    answer:
-      "Sim. A avaliação pode considerar diagnósticos diferenciais e possíveis condições associadas relevantes para a compreensão do caso.",
+      "A avaliação considera outras hipóteses que possam contribuir para a compreensão das dificuldades apresentadas.",
   },
   {
     question: "A avaliação é online?",
     answer:
-      "Sim. O processo é realizado online para adultos em diferentes regiões do Brasil. Caso seja necessário algum procedimento complementar presencial, você será orientado.",
+      "Sim. A PertenSer realiza avaliação psicológica online para adultos em todo o Brasil.",
   },
   {
     question: "Quanto tempo dura?",
-    answer:
-      "A duração varia conforme cada caso. Em média, o processo acontece ao longo de 8 sessões.",
+    answer: "Em média, 8 sessões, podendo variar conforme cada caso.",
   },
   {
     question: "Recebo um laudo?",
     answer:
-      "Sim. Ao final do processo, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação realizada.",
+      "Sim. Ao final, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação.",
   },
 ];
 
@@ -97,11 +90,10 @@ export default function TdahPage() {
             <h2>Uma avaliação olha além da hipótese inicial.</h2>
             <div className="lead" style={{ marginTop: 20 }}>
               <p>
-                Na PertenSer, a investigação considera sua história de vida, seu funcionamento cognitivo, emocional e comportamental e os impactos das dificuldades no cotidiano.
+                Na investigação de TDAH em adultos, são considerados aspectos como atenção, organização, planejamento, gestão do tempo, impulsividade e funcionamento executivo, além dos impactos dessas dificuldades no cotidiano.
               </p>
-              <p>O processo pode envolver entrevistas, instrumentos psicológicos e informações complementares.</p>
               <p>
-                Além da hipótese de TDAH, também são considerados diagnósticos diferenciais e possíveis condições associadas quando relevantes para a compreensão do caso.
+                A avaliação também considera o desenvolvimento ao longo da vida, diagnósticos diferenciais e possíveis condições associadas.
               </p>
             </div>
             <p className="quote">
@@ -119,7 +111,7 @@ export default function TdahPage() {
           </div>
           <ProcessSteps
             steps={tdahProcess}
-            note="Cada avaliação é individualizada e sua duração pode variar. Em média, o processo acontece ao longo de 8 sessões."
+            note="Em média, o processo acontece ao longo de 8 sessões, podendo variar conforme cada caso."
           />
         </div>
       </section>
@@ -138,11 +130,9 @@ export default function TdahPage() {
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
-              {site.responsible.role}
+              {site.responsible.credentials}
               <br />
-              {site.responsible.specialty}
-              <br />
-              {site.responsible.title}
+              Fundadora e responsável técnica
             </p>
             <div className="actions">
               <Button href="/sobre">Conheça a PertenSer</Button>
