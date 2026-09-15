@@ -168,23 +168,21 @@ export default function AvaliacaoPage() {
           </div>
           <div className="cards">
             <article className="card">
-              <p className="index">Foco</p>
               <h3>TDAH em adultos</h3>
               <p>
-                Avaliação para adultos que desejam investigar a possibilidade de TDAH e compreender melhor aspectos do seu funcionamento e seus impactos no cotidiano.
+                Investigação psicológica de TDAH na vida adulta e de seus possíveis impactos no funcionamento cotidiano.
               </p>
               <Button href="/tdah-em-adultos" variant="secondary">
-                TDAH em adultos
+                Saiba mais sobre TDAH em adultos
               </Button>
             </article>
             <article className="card">
-              <p className="index">Foco</p>
               <h3>TEA em adultos</h3>
               <p>
-                Avaliação para adultos que desejam investigar a possibilidade de Transtorno do Espectro Autista e compreender características presentes em seu funcionamento e ao longo da sua história.
+                Investigação psicológica de TEA na vida adulta, considerando desenvolvimento e funcionamento atual.
               </p>
               <Button href="/tea-em-adultos" variant="secondary">
-                TEA em adultos
+                Saiba mais sobre TEA em adultos
               </Button>
             </article>
           </div>
@@ -202,10 +200,7 @@ export default function AvaliacaoPage() {
           </div>
           <div className="lead">
             <p>
-              O processo é realizado online, permitindo o atendimento de pessoas de diferentes regiões do país.
-            </p>
-            <p>
-              Caso seja identificada a necessidade de algum procedimento complementar presencial, você será orientado durante a avaliação.
+              O processo é realizado online. Caso seja necessário algum procedimento complementar presencial, a pessoa será orientada durante a avaliação.
             </p>
           </div>
         </div>
