@@ -12,6 +12,7 @@ export const site = {
     shortName: "Bruna Kindlein",
     crp: "CRP 07/31496",
     role: "Psicóloga | CRP 07/31496",
+    credentials: "Psicóloga | Pós-graduada em Neuropsicologia | CRP 07/31496",
     specialty: "Especialista em Neuropsicologia",
     title: "Fundadora e responsável técnica da Clínica PertenSer",
   },

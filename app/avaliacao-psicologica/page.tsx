@@ -211,16 +211,18 @@ export default function AvaliacaoPage() {
           <div className="section-head">
             <h2>Cuidado na escuta e rigor na investigação.</h2>
             <div className="lead" style={{ marginTop: 20 }}>
-              <p>A PertenSer é uma clínica especializada em avaliação psicológica de adultos.</p>
               <p>
-                Fundada pela psicóloga e especialista em Neuropsicologia Bruna Kindlein, a clínica conta com uma equipe envolvida nos processos de avaliação, conduzidos com rigor técnico, supervisão e atenção às particularidades de cada história.
+                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, fundada e dirigida tecnicamente pela psicóloga Bruna Kindlein.
+              </p>
+              <p>
+                Os processos são conduzidos de forma individualizada, com rigor técnico e participação da equipe da clínica.
               </p>
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
-              {site.responsible.role}
+              {site.responsible.credentials}
               <br />
-              {site.responsible.title}
+              Fundadora e responsável técnica
             </p>
             <div className="actions">
               <Button href="/sobre">Conheça a PertenSer</Button>
