@@ -1,8 +1,7 @@
 export type Category =
   | "Avaliação Psicológica"
   | "TDAH em Adultos"
-  | "TEA em Adultos"
-  | "Psicologia";
+  | "TEA em Adultos";
 
 export type Article = {
   slug: string;
@@ -17,7 +16,6 @@ export const categories: Category[] = [
   "Avaliação Psicológica",
   "TDAH em Adultos",
   "TEA em Adultos",
-  "Psicologia",
 ];
 
 export const articles: Article[] = [
