@@ -16,33 +16,31 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Preciso ter certeza de que sou autista para procurar uma avaliação?",
-    answer:
-      "Não. A avaliação existe justamente para investigar essa hipótese e compreender o que pode explicar as questões que motivaram a procura.",
+    answer: "Não. A avaliação existe justamente para investigar essa possibilidade.",
   },
   {
-    question: "E se a avaliação não confirmar TEA?",
+    question: "E se a hipótese de TEA não for confirmada?",
     answer:
-      "Mesmo quando a hipótese inicial não é confirmada, os resultados podem contribuir para uma melhor compreensão do seu funcionamento e orientar os próximos cuidados.",
+      "A avaliação considera outras hipóteses que possam contribuir para a compreensão das questões apresentadas.",
   },
   {
     question: "Outras possibilidades também são consideradas?",
     answer:
-      "Sim. Diagnósticos diferenciais e possíveis condições associadas podem ser considerados quando relevantes para a compreensão do caso.",
+      "Sim. Diagnósticos diferenciais e possíveis condições associadas podem ser considerados durante a avaliação.",
   },
   {
     question: "A avaliação é online?",
     answer:
-      "Sim. O processo é realizado online para adultos de diferentes regiões do Brasil. Caso seja necessário algum procedimento complementar presencial, você será orientado.",
+      "Sim. A PertenSer realiza avaliação psicológica online para adultos em todo o Brasil.",
   },
   {
     question: "Quanto tempo dura?",
-    answer:
-      "A duração varia conforme cada caso. Em média, o processo acontece ao longo de 8 sessões.",
+    answer: "Em média, 8 sessões, podendo variar conforme cada caso.",
   },
   {
     question: "Recebo um laudo?",
     answer:
-      "Sim. Ao final, é realizada uma devolutiva e entregue o laudo psicológico correspondente à avaliação realizada.",
+      "Sim. Ao final, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação.",
   },
 ];
 
@@ -65,7 +63,7 @@ export default function TeaPage() {
             <p className="eyebrow">TEA em adultos</p>
             <h1>Algumas respostas sobre o presente podem começar pela compreensão da sua história.</h1>
             <p className="lead" style={{ marginTop: 24 }}>
-              A avaliação psicológica permite investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, considerando sua trajetória, seu funcionamento e as dificuldades vivenciadas no cotidiano.
+              A avaliação psicológica permite investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, considerando o desenvolvimento, as formas de interação e comunicação, o funcionamento atual e diferentes experiências ao longo da vida.
             </p>
             <div className="actions">
               <Button href="/avaliacao-psicologica">Quero conhecer a avaliação</Button>
@@ -101,11 +99,10 @@ export default function TeaPage() {
             <h2>A avaliação considera mais do que a hipótese inicial.</h2>
             <div className="lead" style={{ marginTop: 20 }}>
               <p>
-                Na PertenSer, o processo considera a história de vida e diferentes aspectos do funcionamento cognitivo, emocional e comportamental.
+                Na investigação de TEA em adultos, são considerados aspectos do desenvolvimento, comunicação e interação social, padrões de comportamento e interesses, sensibilidades e formas de adaptação desenvolvidas ao longo da vida.
               </p>
-              <p>A investigação pode envolver entrevistas, instrumentos psicológicos e informações complementares.</p>
               <p>
-                Além da hipótese de TEA, diagnósticos diferenciais e possíveis condições associadas também podem ser considerados quando relevantes para o caso.
+                A avaliação também considera aspectos emocionais e cognitivos, diagnósticos diferenciais e possíveis condições associadas.
               </p>
             </div>
             <p className="quote">
@@ -123,7 +120,7 @@ export default function TeaPage() {
           </div>
           <ProcessSteps
             steps={teaProcess}
-            note="A duração pode variar de acordo com cada caso. Em média, o processo acontece ao longo de 8 sessões."
+            note="Em média, o processo acontece ao longo de 8 sessões, podendo variar conforme cada caso."
           />
         </div>
       </section>
@@ -142,11 +139,9 @@ export default function TeaPage() {
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
-              {site.responsible.role}
+              {site.responsible.credentials}
               <br />
-              {site.responsible.specialty}
-              <br />
-              {site.responsible.title}
+              Fundadora e responsável técnica
             </p>
             <div className="actions">
               <Button href="/sobre">Conheça a PertenSer</Button>

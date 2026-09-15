@@ -40,20 +40,20 @@ export const tdahProcess = [
 
 export const teaProcess = [
   {
-    title: "Entrevista e história de vida",
-    text: "Compreendemos o que motivou a busca pela avaliação e aspectos importantes da sua trajetória.",
+    title: "Entrevista inicial",
+    text: "Compreensão do desenvolvimento, das dificuldades atuais e dos motivos que levaram à investigação de TEA.",
   },
   {
     title: "Investigação",
-    text: "Ao longo dos encontros, são reunidas informações por meio de entrevistas, instrumentos psicológicos e, quando necessário, informações complementares.",
+    text: "Entrevistas, instrumentos psicológicos e informações complementares relevantes para cada caso.",
   },
   {
     title: "Análise",
-    text: "As informações são analisadas de forma integrada, considerando a hipótese de TEA e outras possibilidades relevantes.",
+    text: "Integração das informações, considerando a hipótese de TEA, diagnósticos diferenciais e possíveis condições associadas.",
   },
   {
     title: "Devolutiva e laudo",
-    text: "Ao final, você recebe uma devolutiva com a explicação dos resultados e orientações, além do laudo psicológico correspondente à avaliação realizada.",
+    text: "Apresentação dos resultados, entrega do laudo psicológico e orientações pertinentes.",
   },
 ];
 
