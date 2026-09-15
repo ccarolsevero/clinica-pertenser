@@ -943,6 +943,10 @@ h3 {
   object-position: 84% 8%;
 }
 
+.hero-photo-tea {
+  object-position: 100% 50%;
+}
+
 .hero-photo-sobre {
   object-position: right center;
 }

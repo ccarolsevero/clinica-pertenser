@@ -51,12 +51,12 @@ export default function TeaPage() {
       <section className="hero-photo">
         <div className="hero-photo-media">
           <Image
-            src="/tea-tdah-hero.png"
+            src="/tea-hero.png"
             alt="Bruna Kindlein, psicóloga da Clínica PertenSer"
             fill
             priority
             sizes="100vw"
-            className="hero-photo-image hero-photo-tea-tdah"
+            className="hero-photo-image hero-photo-tea"
           />
         </div>
         <div className="container">
