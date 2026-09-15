@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
 import { ProcessSteps } from "@/components/ProcessSteps";
+import { Testimonials } from "@/components/Testimonials";
 import { teaProcess } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -150,7 +151,9 @@ export default function TeaPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <Testimonials alt />
+
+      <section className="section">
         <div className="container">
           <div className="section-head">
             <h2>Dúvidas sobre a avaliação de TEA em adultos</h2>

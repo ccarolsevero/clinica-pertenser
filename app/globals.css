@@ -501,6 +501,69 @@ h3 {
   flex: 1;
 }
 
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.testimonial {
+  margin: 0;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 38px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.section.alt .testimonial {
+  background: var(--paper);
+}
+
+.testimonial .stars {
+  color: var(--coral);
+  font-size: 1.05rem;
+  letter-spacing: 0.22em;
+}
+
+.testimonial blockquote {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+/* Abaixo de 1080px os cards ficariam estreitos demais: viram carrossel. */
+@media (max-width: 1080px) {
+  .testimonials {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+  }
+
+  .testimonial {
+    flex: 0 0 calc((100% - 22px) / 2);
+    scroll-snap-align: start;
+  }
+
+  .testimonials::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .testimonials::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 720px) {
+  .testimonial {
+    flex-basis: 86%;
+  }
+}
+
 .link {
   color: var(--green);
   font-weight: 600;

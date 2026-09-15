@@ -4,6 +4,7 @@ import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
 import { ProcessSteps } from "@/components/ProcessSteps";
+import { Testimonials } from "@/components/Testimonials";
 import { evaluationProcess, teamMessage } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -228,7 +229,9 @@ export default function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section">
+      <Testimonials />
+
+      <section className="section alt">
         <div className="container">
           <div className="section-head">
             <h2>Dúvidas sobre a avaliação psicológica</h2>

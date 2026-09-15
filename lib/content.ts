@@ -72,6 +72,12 @@ export const therapyProcess = [
   },
 ];
 
+export const testimonials = [
+  "Experiência totalmente incrível. Tanto a Bruna quanto a Camila são excelentes profissionais, super atenciosas, cuidadosas e acolhedoras. Fazem uma avaliação ótima, bem detalhada e completa. Atendimento super humanizado, trazendo maior conforto e segurança.",
+  "Experiência incrível, acolhedora e humanizada. Super indico a Clínica, Dra. Bruna e sua equipe são profissionais excelentes!!",
+  "Foi maravilhoso fazer uma avaliação com a Dra. Bruna da Clínica PertenSer, pois entendi melhor porque eu sou assim! Daí fechamos um diagnóstico que explica tudo! O motivo do meu jeito especial de ser! Com isso podemos trabalhar as maneiras de eu me inserir no mundo da melhor forma para mim, sem sentir que sou estranha, doidinha, impulsiva. Obrigada dra! 💗",
+];
+
 export const teamMessage = whatsappUrl(
   "Olá, gostaria de falar com a equipe da PertenSer."
 );
