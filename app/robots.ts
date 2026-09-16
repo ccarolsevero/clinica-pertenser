@@ -3,5 +3,7 @@ export default function robots() {
     rules: [
       { userAgent: "*", allow: "/", disallow: ["/admin", "/api/admin"] },
     ],
+    sitemap: "https://www.clinicapertenser.com.br/sitemap.xml",
+    host: "https://www.clinicapertenser.com.br",
   };
 }

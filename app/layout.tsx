@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description:
       "Avaliação psicológica online para adultos, com foco na investigação de TDAH, TEA e diagnósticos diferenciais. Atendimento em todo o Brasil.",
-    metadataBase: new URL("https://clinicapertenser.com.br"),
+    metadataBase: new URL("https://www.clinicapertenser.com.br"),
   };
 }
 
