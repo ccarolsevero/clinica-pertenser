@@ -26,7 +26,7 @@ export type Article = {
   excerpt: string;
   category: string;
   date: string;
-  content: string[];
+  content: string;
 };
 
 export type FaqItem = {

@@ -1370,6 +1370,126 @@ h3 {
   border-color: var(--line);
 }
 
+.admin-field {
+  display: grid;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.editor,
+.editor-loading {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.editor-loading {
+  min-height: 280px;
+  padding: 16px 18px;
+}
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.editor-toolbar button {
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  padding: 7px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.editor-toolbar button:hover,
+.editor-toolbar button.is-active {
+  background: var(--green);
+  color: var(--paper);
+}
+
+.editor .tiptap {
+  min-height: 280px;
+  padding: 16px 18px;
+  outline: none;
+  color: var(--ink);
+}
+
+.editor .tiptap p.is-editor-empty:first-child::before,
+.editor .tiptap p.is-empty:first-child::before {
+  color: var(--muted);
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.article-content,
+.editor .tiptap {
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.article-content {
+  margin-top: 32px;
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+.article-content p,
+.editor .tiptap p,
+.article-content ul,
+.editor .tiptap ul,
+.article-content ol,
+.editor .tiptap ol,
+.article-content blockquote,
+.editor .tiptap blockquote {
+  margin: 0 0 1em;
+}
+
+.article-content ul,
+.editor .tiptap ul,
+.article-content ol,
+.editor .tiptap ol {
+  padding-left: 1.3em;
+}
+
+.article-content li,
+.editor .tiptap li {
+  margin: 0 0 0.35em;
+}
+
+.article-content h2,
+.editor .tiptap h2,
+.article-content h3,
+.editor .tiptap h3 {
+  color: var(--green);
+  margin: 1.3em 0 0.5em;
+}
+
+.article-content a,
+.editor .tiptap a {
+  color: var(--burgundy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-content blockquote,
+.editor .tiptap blockquote {
+  border-left: 3px solid var(--line);
+  padding-left: 16px;
+  color: var(--green);
+  font-family: var(--font-display), Georgia, serif;
+}
+
 @media (max-width: 840px) {
   .admin-split {
     grid-template-columns: 1fr;

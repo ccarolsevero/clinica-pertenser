@@ -3,6 +3,7 @@ import "server-only";
 import { promises as fs } from "fs";
 import path from "path";
 import { revalidatePath } from "next/cache";
+import { articleHtml, sanitizeArticleHtml } from "./html";
 import type { SiteContent } from "./types";
 
 const CONTENT_FILE = path.join(process.cwd(), "data", "content.json");
@@ -15,8 +16,18 @@ export async function getContent(): Promise<SiteContent> {
   if (cache && cache.mtime === stat.mtimeMs) return cache.data;
   const raw = await fs.readFile(CONTENT_FILE, "utf8");
   const data = JSON.parse(raw) as SiteContent;
-  cache = { data, mtime: stat.mtimeMs };
-  return data;
+  const normalized = {
+    ...data,
+    blog: {
+      ...data.blog,
+      articles: data.blog.articles.map((article) => ({
+        ...article,
+        content: articleHtml(article.content as string | string[]),
+      })),
+    },
+  };
+  cache = { data: normalized, mtime: stat.mtimeMs };
+  return normalized;
 }
 
 function slugify(value: string) {
@@ -50,7 +61,7 @@ export function normalizeContent(input: SiteContent): SiteContent {
       excerpt: article.excerpt.trim(),
       category,
       date: article.date || new Date().toISOString().slice(0, 10),
-      content: article.content.map((paragraph) => paragraph.trim()).filter(Boolean),
+      content: sanitizeArticleHtml(articleHtml(article.content)),
     };
   });
 

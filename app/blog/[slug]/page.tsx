@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Button } from "@/components/Button";
 import { getArticle } from "@/lib/articles";
 import { formatDate } from "@/lib/format";
+import { sanitizeArticleHtml } from "@/lib/html";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -30,11 +31,10 @@ export default async function ArticlePage({ params }: Props) {
         <p className="eyebrow">{article.category}</p>
         <h1>{article.title}</h1>
         <p className="support">{formatDate(article.date)}</p>
-        <div className="lead" style={{ marginTop: 32 }}>
-          {article.content.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+        <div
+          className="article-content"
+          dangerouslySetInnerHTML={{ __html: sanitizeArticleHtml(article.content) }}
+        />
         <div className="actions">
           <Button href="/blog" variant="secondary">
             Voltar aos conteúdos

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { RichTextEditor } from "@/components/RichTextEditor";
 import type { Article, FaqItem, ProcessStep, SiteContent } from "@/lib/types";
 
 type Tab = "clinica" | "paginas" | "blog" | "depoimentos";
@@ -47,7 +48,7 @@ function emptyArticle(category: string): Article {
     excerpt: "",
     category,
     date: new Date().toISOString().slice(0, 10),
-    content: [""],
+    content: "",
   };
 }
 
@@ -494,18 +495,14 @@ export function AdminPanel() {
                     onChange={(event) => updateArticle({ excerpt: event.target.value })}
                   />
                 </label>
-                <label>
-                  Texto (um parágrafo por bloco, com linha em branco entre eles)
-                  <textarea
-                    rows={12}
-                    value={selectedArticle.content.join("\n\n")}
-                    onChange={(event) =>
-                      updateArticle({
-                        content: event.target.value.split(/\n\s*\n/).map((paragraph) => paragraph.trim()),
-                      })
-                    }
+                <div className="admin-field">
+                  <span>Texto do artigo</span>
+                  <RichTextEditor
+                    key={`${articleIndex}-${selectedArticle.slug}`}
+                    value={selectedArticle.content}
+                    onChange={(html) => updateArticle({ content: html })}
                   />
-                </label>
+                </div>
                 <button
                   type="button"
                   className="admin-link"
