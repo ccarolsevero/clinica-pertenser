@@ -77,10 +77,18 @@ export function normalizeContent(input: SiteContent): SiteContent {
   };
 }
 
+function githubConfig() {
+  const token = (process.env.CONTENT_GITHUB_TOKEN || process.env.GITHUB_TOKEN || "").trim();
+  const repo = (
+    process.env.GITHUB_REPO ||
+    [process.env.VERCEL_GIT_REPO_OWNER, process.env.VERCEL_GIT_REPO_SLUG].filter(Boolean).join("/")
+  ).trim();
+  const branch = (process.env.GITHUB_BRANCH || "main").trim();
+  return { token, repo, branch };
+}
+
 async function commitToGitHub(json: string) {
-  const token = process.env.GITHUB_TOKEN;
-  const repo = process.env.GITHUB_REPO;
-  const branch = process.env.GITHUB_BRANCH || "main";
+  const { token, repo, branch } = await githubConfig();
   if (!token || !repo) return { ok: false as const, skipped: true as const };
 
   const headers = {
@@ -89,11 +97,12 @@ async function commitToGitHub(json: string) {
     "X-GitHub-Api-Version": "2022-11-28",
     "User-Agent": "pertenser-admin",
   };
-  const url = `https://api.github.com/repos/${repo}/contents/${GITHUB_PATH}?ref=${encodeURIComponent(branch)}`;
+  const encodedPath = GITHUB_PATH.split("/").map(encodeURIComponent).join("/");
+  const url = `https://api.github.com/repos/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(branch)}`;
   const current = await fetch(url, { headers, cache: "no-store" });
   const currentJson = current.ok ? ((await current.json()) as { sha?: string }) : {};
 
-  const put = await fetch(`https://api.github.com/repos/${repo}/contents/${GITHUB_PATH}`, {
+  const put = await fetch(`https://api.github.com/repos/${repo}/contents/${encodedPath}`, {
     method: "PUT",
     headers: { ...headers, "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -105,6 +114,11 @@ async function commitToGitHub(json: string) {
   });
 
   if (!put.ok) {
+    if (put.status === 404) {
+      throw new Error(
+        "O GitHub não aceitou o token neste repositório privado. No Vercel, substitua GITHUB_TOKEN por um Personal Access Token clássico (começa com ghp_) com a permissão repo.",
+      );
+    }
     const detail = await put.text();
     throw new Error(`Não foi possível salvar no GitHub (${put.status}). ${detail.slice(0, 280)}`);
   }
@@ -114,11 +128,12 @@ async function commitToGitHub(json: string) {
 export async function saveContent(input: SiteContent) {
   const data = normalizeContent(input);
   const json = `${JSON.stringify(data, null, 2)}\n`;
+  const { token, repo } = githubConfig();
   const onVercel = Boolean(process.env.VERCEL);
 
   let github: "saved" | "skipped" | "missing" = "skipped";
-  if (onVercel || process.env.GITHUB_TOKEN) {
-    if (!process.env.GITHUB_TOKEN || !process.env.GITHUB_REPO) {
+  if (onVercel || token) {
+    if (!token || !repo) {
       throw new Error(
         "Neste servidor não é possível gravar o arquivo local. Cadastre GITHUB_TOKEN e GITHUB_REPO na Vercel para salvar os textos.",
       );
