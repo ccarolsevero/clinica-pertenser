@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/Button";
-import { formatDate, getArticle, getArticles } from "@/lib/articles";
+import { getArticle } from "@/lib/articles";
+import { formatDate } from "@/lib/format";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-  return getArticles().map((article) => ({ slug: article.slug }));
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = await getArticle(slug);
   if (!article) return { title: "Artigo" };
   return {
     title: article.title,
@@ -23,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = getArticle(slug);
+  const article = await getArticle(slug);
 
   if (!article) notFound();
 

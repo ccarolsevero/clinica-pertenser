@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { Article } from "@/lib/articles";
-import { formatDate } from "@/lib/articles";
+import { formatDate } from "@/lib/format";
+import type { Article } from "@/lib/types";
 
 export function ArticleCard({
   article,

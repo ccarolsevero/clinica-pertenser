@@ -3,8 +3,8 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { PortraitSlot } from "@/components/PortraitSlot";
-import { teamMessage } from "@/lib/content";
-import { site } from "@/lib/site";
+import { pageText, teamMessage } from "@/lib/site";
+import { getContent } from "@/lib/store";
 
 export const metadata: Metadata = {
   title: "Sobre a PertenSer",
@@ -12,19 +12,20 @@ export const metadata: Metadata = {
     "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TDAH e TEA.",
 };
 
-export default function SobrePage() {
+export default async function SobrePage() {
+  const { pages, site } = await getContent();
+  const t = (key: string) => pageText(pages, "sobre", key);
+
   return (
     <>
       <section className="page-hero">
         <div className="container hero-grid">
           <div>
-            <p className="eyebrow">Sobre a PertenSer</p>
-            <h1>Uma clínica criada para olhar além de um diagnóstico.</h1>
+            <p className="eyebrow">{t("heroEyebrow")}</p>
+            <h1>{t("heroTitle")}</h1>
             <div className="lead" style={{ marginTop: 24 }}>
-              <p>
-                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco na investigação de TDAH e Transtorno do Espectro Autista (TEA).
-              </p>
-              <p>O trabalho une rigor técnico, escuta e um olhar individualizado para cada caso.</p>
+              <p>{t("heroLead1")}</p>
+              <p>{t("heroLead2")}</p>
             </div>
           </div>
           <div className="hero-brand">
@@ -52,15 +53,9 @@ export default function SobrePage() {
             <p className="eyebrow">Fundadora e responsável técnica</p>
             <h2>{site.responsible.shortName}</h2>
             <div className="lead" style={{ marginTop: 24 }}>
-              <p>
-                Bruna Kindlein é psicóloga, pós-graduada em Neuropsicologia, fundadora e responsável técnica da Clínica PertenSer.
-              </p>
-              <p>
-                Sua atuação é voltada ao trabalho com adultos e à avaliação psicológica, especialmente na investigação de TDAH e TEA. Também possui experiência na supervisão de outros profissionais.
-              </p>
-              <p>
-                A PertenSer nasceu dessa trajetória e da proposta de oferecer um trabalho tecnicamente fundamentado, cuidadoso e próximo.
-              </p>
+              <p>{t("founderLead1")}</p>
+              <p>{t("founderLead2")}</p>
+              <p>{t("founderLead3")}</p>
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
@@ -75,21 +70,21 @@ export default function SobrePage() {
       <section className="section green">
         <div className="container">
           <div className="section-head">
-            <h2>Um trabalho construído em equipe.</h2>
+            <h2>{t("teamTitle")}</h2>
             <p className="lead" style={{ marginTop: 20 }}>
-              A PertenSer conta com uma equipe envolvida nos processos da clínica, com acompanhamento da responsável técnica e cuidado em cada etapa do atendimento.
+              {t("teamLead")}
             </p>
-            <p className="quote light">Rigor para investigar. Clareza para orientar. Cuidado para compreender.</p>
+            <p className="quote light">{t("teamQuote")}</p>
           </div>
         </div>
       </section>
 
       <CTA
-        title="Conheça o trabalho da PertenSer."
-        text="Saiba mais sobre a avaliação psicológica ou converse com a equipe para esclarecer suas dúvidas."
-        support="Atendimento online para adultos em todo o Brasil."
+        title={t("ctaTitle")}
+        text={t("ctaText")}
+        support={t("ctaSupport")}
         primary={{ href: "/avaliacao-psicologica", label: "Conheça a avaliação psicológica" }}
-        secondary={{ href: teamMessage, label: "Falar com a equipe", external: true }}
+        secondary={{ href: teamMessage(site.whatsapp), label: "Falar com a equipe", external: true }}
       />
     </>
   );

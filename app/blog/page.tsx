@@ -2,17 +2,23 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { BlogList } from "@/components/BlogList";
 import { CTA } from "@/components/CTA";
-import { teamMessage } from "@/lib/content";
-import { getArticles } from "@/lib/articles";
+import { getArticles, getCategories } from "@/lib/articles";
+import { pageText, teamMessage } from "@/lib/site";
+import { getContent } from "@/lib/store";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Conteúdos sobre avaliação psicológica, TDAH, autismo na vida adulta e outros temas para ajudar você a compreender melhor suas dúvidas.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { pages } = await getContent();
+  return {
+    title: "Blog",
+    description: pageText(pages, "blog", "metaDescription"),
+  };
+}
 
-export default function BlogPage() {
-  const articles = getArticles();
+export default async function BlogPage() {
+  const { pages, site } = await getContent();
+  const t = (key: string) => pageText(pages, "blog", key);
+  const articles = await getArticles();
+  const categories = await getCategories();
 
   return (
     <>
@@ -30,13 +36,11 @@ export default function BlogPage() {
         </div>
         <div className="container">
           <div className="hero-photo-content">
-            <p className="eyebrow">Conteúdos PertenSer</p>
-            <h1>Informação para ajudar você a compreender melhor as suas dúvidas.</h1>
+            <p className="eyebrow">{t("heroEyebrow")}</p>
+            <h1>{t("heroTitle")}</h1>
             <div className="lead" style={{ marginTop: 24 }}>
-              <p>
-                Conteúdos sobre avaliação psicológica, TDAH, autismo na vida adulta e outros temas relacionados à compreensão do funcionamento psicológico.
-              </p>
-              <p>Informação cuidadosa para orientar — sem transformar conteúdo em autodiagnóstico.</p>
+              <p>{t("heroLead1")}</p>
+              <p>{t("heroLead2")}</p>
             </div>
           </div>
         </div>
@@ -45,17 +49,17 @@ export default function BlogPage() {
       <section className="section alt">
         <div className="container">
           <div className="section-head">
-            <h2>Conteúdos recentes</h2>
+            <h2>{t("listTitle")}</h2>
           </div>
-          <BlogList articles={articles} />
+          <BlogList articles={articles} categories={categories} />
         </div>
       </section>
 
       <CTA
-        title="Está buscando mais do que informação?"
-        text="Se você tem dúvidas sobre seu funcionamento ou deseja investigar alguma hipótese, conheça o processo de avaliação psicológica da PertenSer."
+        title={t("ctaTitle")}
+        text={t("ctaText")}
         primary={{ href: "/avaliacao-psicologica", label: "Conheça a avaliação psicológica" }}
-        secondary={{ href: teamMessage, label: "Falar com a equipe", external: true }}
+        secondary={{ href: teamMessage(site.whatsapp), label: "Falar com a equipe", external: true }}
       />
     </>
   );

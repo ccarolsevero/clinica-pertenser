@@ -5,8 +5,8 @@ import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
-import { teaProcess } from "@/lib/content";
-import { site } from "@/lib/site";
+import { pageFaqs, pageText } from "@/lib/site";
+import { getContent } from "@/lib/store";
 
 export const metadata: Metadata = {
   title: "TEA em adultos",
@@ -14,38 +14,10 @@ export const metadata: Metadata = {
     "Avaliação psicológica para investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, de forma individualizada.",
 };
 
-const faqs = [
-  {
-    question: "Preciso ter certeza de que sou autista para procurar uma avaliação?",
-    answer: "Não. A avaliação existe justamente para investigar essa possibilidade.",
-  },
-  {
-    question: "E se a hipótese de TEA não for confirmada?",
-    answer:
-      "A avaliação considera outras hipóteses que possam contribuir para a compreensão das questões apresentadas.",
-  },
-  {
-    question: "Outras possibilidades também são consideradas?",
-    answer:
-      "Sim. Diagnósticos diferenciais e possíveis condições associadas podem ser considerados durante a avaliação.",
-  },
-  {
-    question: "A avaliação é online?",
-    answer:
-      "Sim. A PertenSer realiza avaliação psicológica online para adultos em todo o Brasil.",
-  },
-  {
-    question: "Quanto tempo dura?",
-    answer: "Em média, 8 sessões, podendo variar conforme cada caso.",
-  },
-  {
-    question: "Recebo um laudo?",
-    answer:
-      "Sim. Ao final, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação.",
-  },
-];
+export default async function TeaPage() {
+  const { pages, site, processes } = await getContent();
+  const t = (key: string) => pageText(pages, "tea", key);
 
-export default function TeaPage() {
   return (
     <>
       <section className="hero-photo">
@@ -62,15 +34,15 @@ export default function TeaPage() {
         </div>
         <div className="container">
           <div className="hero-photo-content">
-            <p className="eyebrow">TEA em adultos</p>
-            <h1>Algumas respostas sobre o presente podem começar pela compreensão da sua história.</h1>
+            <p className="eyebrow">{t("heroEyebrow")}</p>
+            <h1>{t("heroTitle")}</h1>
             <p className="lead" style={{ marginTop: 24 }}>
-              A avaliação psicológica permite investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, considerando o desenvolvimento, as formas de interação e comunicação, o funcionamento atual e diferentes experiências ao longo da vida.
+              {t("heroLead")}
             </p>
             <div className="actions">
               <Button href="/avaliacao-psicologica">Quero conhecer a avaliação</Button>
             </div>
-            <p className="support">Avaliação psicológica online para adultos em todo o Brasil.</p>
+            <p className="support">{t("heroSupport")}</p>
           </div>
         </div>
       </section>
@@ -78,18 +50,12 @@ export default function TeaPage() {
       <section className="section alt">
         <div className="container">
           <div className="section-head">
-            <h2>A possibilidade de autismo pode surgir somente na vida adulta.</h2>
+            <h2>{t("seekTitle")}</h2>
             <div className="lead" style={{ marginTop: 20 }}>
-              <p>
-                Algumas pessoas chegam à vida adulta com dúvidas sobre o próprio funcionamento ou com dificuldades que nunca foram suficientemente compreendidas.
-              </p>
-              <p>
-                Quando surge a hipótese de TEA, a avaliação psicológica permite investigar essa possibilidade de forma individualizada.
-              </p>
+              <p>{t("seekLead1")}</p>
+              <p>{t("seekLead2")}</p>
             </div>
-            <p className="quote">
-              Você não precisa chegar com uma resposta. A avaliação é justamente um espaço de investigação.
-            </p>
+            <p className="quote">{t("seekQuote")}</p>
           </div>
         </div>
       </section>
@@ -97,19 +63,13 @@ export default function TeaPage() {
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Avaliação de TEA em adultos</p>
-            <h2>A avaliação considera mais do que a hipótese inicial.</h2>
+            <p className="eyebrow">{t("evalEyebrow")}</p>
+            <h2>{t("evalTitle")}</h2>
             <div className="lead" style={{ marginTop: 20 }}>
-              <p>
-                Na investigação de TEA em adultos, são considerados aspectos do desenvolvimento, comunicação e interação social, padrões de comportamento e interesses, sensibilidades e formas de adaptação desenvolvidas ao longo da vida.
-              </p>
-              <p>
-                A avaliação também considera aspectos emocionais e cognitivos, diagnósticos diferenciais e possíveis condições associadas.
-              </p>
+              <p>{t("evalLead1")}</p>
+              <p>{t("evalLead2")}</p>
             </div>
-            <p className="quote">
-              O objetivo é compreender o que melhor explica as questões que levaram você a buscar a avaliação.
-            </p>
+            <p className="quote">{t("evalQuote")}</p>
           </div>
         </div>
       </section>
@@ -117,33 +77,26 @@ export default function TeaPage() {
       <section className="section alt">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">O processo</p>
-            <h2>Como acontece a avaliação?</h2>
+            <p className="eyebrow">{t("processEyebrow")}</p>
+            <h2>{t("processTitle")}</h2>
           </div>
-          <ProcessSteps
-            steps={teaProcess}
-            note="Em média, o processo acontece ao longo de 8 sessões, podendo variar conforme cada caso."
-          />
+          <ProcessSteps steps={processes.tea} note={t("processNote")} />
         </div>
       </section>
 
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <h2>Uma avaliação cuidadosa para compreender cada história em sua singularidade.</h2>
+            <h2>{t("clinicTitle")}</h2>
             <div className="lead" style={{ marginTop: 20 }}>
-              <p>
-                A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TEA e TDAH.
-              </p>
-              <p>
-                Os processos contam com uma equipe e são conduzidos com rigor técnico, supervisão e atenção às particularidades de cada pessoa.
-              </p>
+              <p>{t("clinicLead1")}</p>
+              <p>{t("clinicLead2")}</p>
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
               {site.responsible.credentials}
               <br />
-              Fundadora e responsável técnica
+              {site.responsible.founder}
             </p>
             <div className="actions">
               <Button href="/sobre">Conheça a PertenSer</Button>
@@ -157,17 +110,13 @@ export default function TeaPage() {
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <h2>Dúvidas sobre a avaliação de TEA em adultos</h2>
+            <h2>{t("faqTitle")}</h2>
           </div>
-          <FAQ items={faqs} />
+          <FAQ items={pageFaqs(pages, "tea")} />
         </div>
       </section>
 
-      <CTA
-        title="Quer investigar a possibilidade de TEA na vida adulta?"
-        text="Converse com a equipe da PertenSer para entender como funciona a avaliação psicológica e quais são os próximos passos."
-        support="Avaliação psicológica online para adultos em todo o Brasil."
-      />
+      <CTA title={t("ctaTitle")} text={t("ctaText")} support={t("ctaSupport")} />
     </>
   );
 }

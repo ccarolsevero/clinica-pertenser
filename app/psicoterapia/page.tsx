@@ -5,8 +5,8 @@ import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
-import { therapyProcess } from "@/lib/content";
-import { site } from "@/lib/site";
+import { pageFaqs, pageText, whatsappUrl } from "@/lib/site";
+import { getContent } from "@/lib/store";
 
 export const metadata: Metadata = {
   title: "Psicoterapia para adultos",
@@ -14,28 +14,10 @@ export const metadata: Metadata = {
     "Psicoterapia online para adultos, com acompanhamento individualizado de acordo com as necessidades de cada pessoa.",
 };
 
-const faqs = [
-  {
-    question: "A psicoterapia é online?",
-    answer: "Sim. Os atendimentos são realizados online para adultos.",
-  },
-  {
-    question: "Qual é a frequência das sessões?",
-    answer:
-      "A frequência é definida de acordo com as necessidades do acompanhamento.",
-  },
-  {
-    question: "Quanto tempo dura a psicoterapia?",
-    answer: "Não existe uma duração única. O tempo varia conforme cada processo.",
-  },
-  {
-    question: "Vocês atendem por convênio?",
-    answer:
-      "O atendimento é particular. Dependendo do plano, pode haver possibilidade de reembolso.",
-  },
-];
+export default async function PsicoterapiaPage() {
+  const { pages, site, processes } = await getContent();
+  const t = (key: string) => pageText(pages, "psicoterapia", key);
 
-export default function PsicoterapiaPage() {
   return (
     <>
       <section className="hero-photo">
@@ -52,17 +34,20 @@ export default function PsicoterapiaPage() {
         </div>
         <div className="container">
           <div className="hero-photo-content">
-            <p className="eyebrow">Psicoterapia para adultos</p>
-            <h1>Um espaço de cuidado para o que você está vivendo.</h1>
+            <p className="eyebrow">{t("heroEyebrow")}</p>
+            <h1>{t("heroTitle")}</h1>
             <p className="lead" style={{ marginTop: 24 }}>
-              Psicoterapia online para adultos, com acompanhamento de acordo com as necessidades e objetivos de cada pessoa.
+              {t("heroLead")}
             </p>
             <div className="actions">
-              <Button href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Olá, gostaria de saber mais sobre a psicoterapia da PertenSer.")}`} external>
+              <Button
+                href={whatsappUrl(site.whatsapp, "Olá, gostaria de saber mais sobre a psicoterapia da PertenSer.")}
+                external
+              >
                 Quero saber mais
               </Button>
             </div>
-            <p className="support">Atendimento online.</p>
+            <p className="support">{t("heroSupport")}</p>
           </div>
         </div>
       </section>
@@ -70,12 +55,10 @@ export default function PsicoterapiaPage() {
       <section className="section alt">
         <div className="container">
           <div className="section-head">
-            <h2>Cada pessoa chega à psicoterapia por uma razão diferente.</h2>
+            <h2>{t("reasonTitle")}</h2>
             <div className="lead" style={{ marginTop: 20 }}>
-              <p>
-                A psicoterapia pode ser buscada diante de dificuldades emocionais, conflitos, mudanças, questões nos relacionamentos ou do desejo de compreender melhor a si mesmo.
-              </p>
-              <p>O acompanhamento é construído a partir das questões e objetivos de cada pessoa.</p>
+              <p>{t("reasonLead1")}</p>
+              <p>{t("reasonLead2")}</p>
             </div>
           </div>
         </div>
@@ -84,22 +67,20 @@ export default function PsicoterapiaPage() {
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">O processo</p>
-            <h2>Como funciona a psicoterapia?</h2>
+            <p className="eyebrow">{t("processEyebrow")}</p>
+            <h2>{t("processTitle")}</h2>
           </div>
-          <ProcessSteps steps={therapyProcess} />
+          <ProcessSteps steps={processes.therapy} />
         </div>
       </section>
 
       <section className="section alt">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Clínica PertenSer</p>
-            <h2>Um cuidado que considera a sua individualidade.</h2>
+            <p className="eyebrow">{t("clinicEyebrow")}</p>
+            <h2>{t("clinicTitle")}</h2>
             <div className="lead" style={{ marginTop: 20 }}>
-              <p>
-                A PertenSer é uma clínica voltada ao cuidado psicológico de adultos, com um trabalho pautado pela escuta e pelo acompanhamento individualizado.
-              </p>
+              <p>{t("clinicLead")}</p>
             </div>
             <p className="signature">
               <strong>{site.responsible.name}</strong>
@@ -119,16 +100,13 @@ export default function PsicoterapiaPage() {
       <section className="section alt">
         <div className="container">
           <div className="section-head">
-            <h2>Perguntas frequentes</h2>
+            <h2>{t("faqTitle")}</h2>
           </div>
-          <FAQ items={faqs} />
+          <FAQ items={pageFaqs(pages, "psicoterapia")} />
         </div>
       </section>
 
-      <CTA
-        title="Quer saber mais sobre a psicoterapia?"
-        text="Converse com a equipe da PertenSer para esclarecer dúvidas e conhecer os próximos passos."
-      />
+      <CTA title={t("ctaTitle")} text={t("ctaText")} />
     </>
   );
 }

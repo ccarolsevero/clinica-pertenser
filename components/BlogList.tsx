@@ -2,10 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { ArticleCard } from "@/components/ArticleCard";
-import { categories, type Category, type Article } from "@/lib/articles";
+import type { Article } from "@/lib/types";
 
-export function BlogList({ articles }: { articles: Article[] }) {
-  const [active, setActive] = useState<Category | "Todos">("Todos");
+export function BlogList({ articles, categories }: { articles: Article[]; categories: string[] }) {
+  const [active, setActive] = useState<string>("Todos");
 
   const visible = useMemo(() => {
     if (active === "Todos") return articles;
@@ -15,7 +15,7 @@ export function BlogList({ articles }: { articles: Article[] }) {
   return (
     <>
       <div className="filters" role="tablist" aria-label="Filtrar por categoria">
-        {(["Todos", ...categories] as const).map((category) => (
+        {["Todos", ...categories].map((category) => (
           <button
             key={category}
             className={`filter${active === category ? " active" : ""}`}

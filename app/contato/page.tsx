@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/Button";
-import { teamMessage } from "@/lib/content";
-import { site } from "@/lib/site";
+import { pageText, teamMessage } from "@/lib/site";
+import { getContent } from "@/lib/store";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -10,7 +10,11 @@ export const metadata: Metadata = {
     "Entre em contato com a equipe da PertenSer para saber mais sobre avaliação psicológica, psicoterapia e os próximos passos para o atendimento.",
 };
 
-export default function ContatoPage() {
+export default async function ContatoPage() {
+  const { pages, site } = await getContent();
+  const t = (key: string) => pageText(pages, "contato", key);
+  const team = teamMessage(site.whatsapp);
+
   return (
     <>
       <section className="hero-photo">
@@ -27,17 +31,17 @@ export default function ContatoPage() {
         </div>
         <div className="container">
           <div className="hero-photo-content">
-            <p className="eyebrow">Fale com a PertenSer</p>
-            <h1>Vamos conversar sobre o que você está buscando?</h1>
+            <p className="eyebrow">{t("heroEyebrow")}</p>
+            <h1>{t("heroTitle")}</h1>
             <p className="lead" style={{ marginTop: 24 }}>
-              Entre em contato com a equipe da PertenSer para saber mais sobre avaliação psicológica, psicoterapia e os próximos passos para o atendimento.
+              {t("heroLead")}
             </p>
             <div className="actions">
-              <Button href={teamMessage} variant="coral" external>
+              <Button href={team} variant="coral" external>
                 Falar pelo WhatsApp
               </Button>
             </div>
-            <p className="support">Atendimento online para adultos.</p>
+            <p className="support">{t("heroSupport")}</p>
           </div>
         </div>
       </section>
@@ -45,14 +49,14 @@ export default function ContatoPage() {
       <section className="section alt">
         <div className="container">
           <div className="section-head">
-            <h2>Entre em contato</h2>
+            <h2>{t("listTitle")}</h2>
           </div>
           <div className="contact-grid">
             <article className="card">
               <p className="index">WhatsApp</p>
               <h3>{site.whatsappDisplay}</h3>
-              <p>Para informações e agendamento.</p>
-              <Button href={teamMessage} variant="coral" external>
+              <p>{t("whatsappText")}</p>
+              <Button href={team} variant="coral" external>
                 Iniciar conversa
               </Button>
             </article>
@@ -61,7 +65,7 @@ export default function ContatoPage() {
               <h3>
                 <a href={`mailto:${site.email}`}>{site.email}</a>
               </h3>
-              <p>Envie uma mensagem e retornaremos o contato.</p>
+              <p>{t("emailText")}</p>
             </article>
             <article className="card quiet">
               <p className="index">Instagram</p>
@@ -70,7 +74,7 @@ export default function ContatoPage() {
                   @{site.instagram}
                 </a>
               </h3>
-              <p>Acompanhe os conteúdos da clínica.</p>
+              <p>{t("instagramText")}</p>
             </article>
           </div>
         </div>
@@ -79,9 +83,9 @@ export default function ContatoPage() {
       <section className="section">
         <div className="container">
           <div className="section-head">
-            <h2>Onde você estiver.</h2>
+            <h2>{t("whereTitle")}</h2>
             <p className="lead" style={{ marginTop: 20 }}>
-              A PertenSer realiza avaliação psicológica online para adultos de diferentes regiões do Brasil.
+              {t("whereLead")}
             </p>
           </div>
         </div>

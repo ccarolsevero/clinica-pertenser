@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { nav, whatsappUrl } from "@/lib/site";
+import { nav } from "@/lib/site";
+import { useTeamMessage } from "./SiteProvider";
 import { Button } from "./Button";
 import { Logo } from "./Logo";
 
 export function Header() {
   const pathname = usePathname();
+  const team = useTeamMessage();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -60,12 +62,12 @@ export function Header() {
               </Link>
             ),
           )}
-          <Button href={whatsappUrl("Olá, gostaria de falar com a equipe da PertenSer.")} variant="coral" external className="nav-cta-mobile">
+          <Button href={team} variant="coral" external className="nav-cta-mobile">
             Fale conosco
           </Button>
         </nav>
 
-        <Button href={whatsappUrl("Olá, gostaria de falar com a equipe da PertenSer.")} variant="coral" external className="nav-cta-desktop">
+        <Button href={team} variant="coral" external className="nav-cta-desktop">
           Fale conosco
         </Button>
 

@@ -1,6 +1,8 @@
-import { testimonials } from "@/lib/content";
+import { getTestimonials } from "@/lib/content";
 
-export function Testimonials({ alt }: { alt?: boolean }) {
+export async function Testimonials({ alt }: { alt?: boolean }) {
+  const testimonials = await getTestimonials();
+
   return (
     <section className={`section${alt ? " alt" : ""}`}>
       <div className="container">

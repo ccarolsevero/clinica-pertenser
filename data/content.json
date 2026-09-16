@@ -1,0 +1,419 @@
+{
+  "site": {
+    "name": "Clínica PertenSer",
+    "shortName": "PertenSer",
+    "tagline": "Avaliação psicológica e psicoterapia para adultos.",
+    "whatsapp": "5551992535092",
+    "whatsappDisplay": "(51) 99253-5092",
+    "email": "pertencer.psi@gmail.com",
+    "instagram": "clinicapertenser",
+    "instagramUrl": "https://www.instagram.com/clinicapertenser/",
+    "responsible": {
+      "name": "Bruna de Freitas Navarro Kindlein",
+      "shortName": "Bruna Kindlein",
+      "crp": "CRP 07/31496",
+      "role": "Psicóloga | CRP 07/31496",
+      "credentials": "Psicóloga | Pós-graduada em Neuropsicologia | CRP 07/31496",
+      "title": "Fundadora e responsável técnica da Clínica PertenSer",
+      "founder": "Fundadora e responsável técnica"
+    }
+  },
+  "testimonials": [
+    "Experiência totalmente incrível. Tanto a Bruna quanto a Camila são excelentes profissionais, super atenciosas, cuidadosas e acolhedoras. Fazem uma avaliação ótima, bem detalhada e completa. Atendimento super humanizado, trazendo maior conforto e segurança.",
+    "Experiência incrível, acolhedora e humanizada. Super indico a Clínica, Dra. Bruna e sua equipe são profissionais excelentes!!",
+    "Foi maravilhoso fazer uma avaliação com a Dra. Bruna da Clínica PertenSer, pois entendi melhor porque eu sou assim! Daí fechamos um diagnóstico que explica tudo! O motivo do meu jeito especial de ser! Com isso podemos trabalhar as maneiras de eu me inserir no mundo da melhor forma para mim, sem sentir que sou estranha, doidinha, impulsiva. Obrigada dra! 💗"
+  ],
+  "processes": {
+    "evaluation": [
+      {
+        "title": "Entrevista inicial",
+        "text": "Compreensão do motivo da procura, do desenvolvimento e das dificuldades atuais."
+      },
+      {
+        "title": "Investigação",
+        "text": "Entrevistas, instrumentos psicológicos e informações complementares de acordo com cada caso."
+      },
+      {
+        "title": "Análise",
+        "text": "Integração das informações obtidas e investigação das hipóteses relevantes."
+      },
+      {
+        "title": "Devolutiva e laudo",
+        "text": "Apresentação dos resultados, entrega do laudo psicológico e orientações pertinentes."
+      }
+    ],
+    "tdah": [
+      {
+        "title": "Entrevista inicial",
+        "text": "Compreensão das dificuldades atuais, do desenvolvimento e dos motivos que levaram à investigação de TDAH."
+      },
+      {
+        "title": "Investigação",
+        "text": "Entrevistas, instrumentos psicológicos e informações complementares relevantes para cada caso."
+      },
+      {
+        "title": "Análise",
+        "text": "Integração das informações, considerando a hipótese de TDAH, diagnósticos diferenciais e possíveis condições associadas."
+      },
+      {
+        "title": "Devolutiva e laudo",
+        "text": "Apresentação dos resultados, entrega do laudo psicológico e orientações pertinentes."
+      }
+    ],
+    "tea": [
+      {
+        "title": "Entrevista inicial",
+        "text": "Compreensão do desenvolvimento, das dificuldades atuais e dos motivos que levaram à investigação de TEA."
+      },
+      {
+        "title": "Investigação",
+        "text": "Entrevistas, instrumentos psicológicos e informações complementares relevantes para cada caso."
+      },
+      {
+        "title": "Análise",
+        "text": "Integração das informações, considerando a hipótese de TEA, diagnósticos diferenciais e possíveis condições associadas."
+      },
+      {
+        "title": "Devolutiva e laudo",
+        "text": "Apresentação dos resultados, entrega do laudo psicológico e orientações pertinentes."
+      }
+    ],
+    "therapy": [
+      {
+        "title": "Primeiro contato",
+        "text": "A equipe esclarece dúvidas e orienta sobre o atendimento."
+      },
+      {
+        "title": "Primeira sessão",
+        "text": "Um primeiro espaço para compreender o momento atual e as questões que motivaram a busca pela psicoterapia."
+      },
+      {
+        "title": "Acompanhamento",
+        "text": "As sessões acontecem online e o processo é construído de acordo com as necessidades de cada pessoa."
+      }
+    ]
+  },
+  "blog": {
+    "categories": [
+      "Avaliação Psicológica",
+      "TDAH em Adultos",
+      "TEA em Adultos",
+      "Psicoterapia"
+    ],
+    "articles": [
+      {
+        "slug": "avaliacao-psicologica-nao-e-autodiagnostico",
+        "title": "Avaliação psicológica não é o mesmo que autodiagnóstico",
+        "excerpt": "Informação pode ajudar a reconhecer dúvidas, mas compreender o que acontece com você pede um processo cuidadoso, individualizado e tecnicamente fundamentado.",
+        "category": "Avaliação Psicológica",
+        "date": "2026-09-02",
+        "content": [
+          "É cada vez mais comum encontrar conteúdos sobre TDAH, autismo e outros temas da saúde mental. Essa circulação de informação pode ser útil: muitas pessoas passam a nomear dificuldades que, até então, não tinham sido suficientemente compreendidas.",
+          "Ao mesmo tempo, reconhecer-se em uma descrição não é o mesmo que ter uma avaliação. Sintomas semelhantes podem ter explicações diferentes, e uma hipótese inicial — ainda que faça sentido — precisa ser investigada com cuidado.",
+          "A avaliação psicológica considera a história de vida, o funcionamento atual e diferentes possibilidades. O objetivo não é confirmar um diagnóstico a qualquer custo, mas construir respostas que façam sentido para a trajetória de cada pessoa.",
+          "Por isso, na PertenSer, o conteúdo educativo existe para orientar e ampliar a compreensão — sem transformar informação em conclusão. Se você tem dúvidas sobre o próprio funcionamento, o próximo passo pode ser conversar com a equipe e conhecer o processo de avaliação."
+        ]
+      },
+      {
+        "slug": "quando-a-suspeita-de-tdah-aparece-na-vida-adulta",
+        "title": "Quando a suspeita de TDAH aparece na vida adulta",
+        "excerpt": "Para algumas pessoas, a possibilidade de TDAH só se torna visível depois de anos de dificuldades sem uma explicação clara. A suspeita pode ser um ponto de partida — não uma conclusão.",
+        "category": "TDAH em Adultos",
+        "date": "2026-08-20",
+        "content": [
+          "Nem sempre a hipótese de TDAH surge na infância. Na vida adulta, ela pode aparecer quando as demandas aumentam, quando estratégias antigas deixam de ser suficientes ou quando alguém começa a buscar sentido para dificuldades que acompanham há muito tempo.",
+          "Desorganização, procrastinação, inquietação interna, dificuldade de manter o foco ou de sustentar rotinas: esses sinais podem estar relacionados ao TDAH, mas também a outras condições ou a uma combinação de fatores.",
+          "Por isso, a avaliação não parte da premissa de confirmar o diagnóstico. Ela investiga a hipótese inicial e considera diagnósticos diferenciais e possíveis condições associadas, sempre à luz da história e do funcionamento de cada pessoa.",
+          "Você não precisa ter certeza de que é TDAH para procurar uma avaliação. A suspeita é apenas o começo de um processo que busca compreender o que melhor explica as dificuldades vivenciadas."
+        ]
+      },
+      {
+        "slug": "autismo-na-vida-adulta-investigar-sem-apressar-respostas",
+        "title": "Autismo na vida adulta: investigar sem apressar respostas",
+        "excerpt": "A possibilidade de TEA pode surgir somente na vida adulta. A avaliação psicológica oferece um espaço para investigar essa hipótese de forma individualizada, considerando toda a história.",
+        "category": "TEA em Adultos",
+        "date": "2026-08-05",
+        "content": [
+          "Algumas pessoas chegam à vida adulta com a sensação de que sempre precisaram se esforçar para compreender regras sociais, lidar com estímulos ou organizar o próprio funcionamento — sem que isso tenha recebido um nome.",
+          "Quando surge a hipótese de Transtorno do Espectro Autista, é comum buscar conteúdos, relatos e checklists. Esses materiais podem ajudar a formular perguntas, mas não substituem um processo de investigação.",
+          "Na PertenSer, a avaliação de TEA em adultos considera a trajetória, o funcionamento cognitivo, emocional e comportamental, além de outras possibilidades relevantes para o caso. O objetivo não é confirmar TEA a qualquer custo, e sim compreender o que melhor explica as questões que motivaram a procura.",
+          "Você não precisa chegar com uma resposta. A avaliação é justamente um espaço de investigação, com rigor técnico e atenção à singularidade de cada história."
+        ]
+      }
+    ]
+  },
+  "pages": {
+    "home": {
+      "heroEyebrow": "Avaliação psicológica de adultos",
+      "heroTitle": "Entender o que acontece com você pode mudar a forma como você compreende toda a sua história.",
+      "heroLead1": "Avaliação psicológica com foco na investigação de TDAH, Transtorno do Espectro Autista (TEA) e diagnósticos diferenciais.",
+      "heroLead2": "Um processo individualizado para compreender diferentes hipóteses e os fatores relacionados ao funcionamento de cada pessoa.",
+      "heroSupport": "Atendimento online em todo o Brasil.",
+      "helpEyebrow": "Como podemos ajudar",
+      "helpTitle": "Cada história pode precisar de um olhar diferente.",
+      "evalTitle": "Avaliação psicológica para adultos",
+      "evalText": "Investigação de TDAH, TEA e diagnósticos diferenciais para uma compreensão ampla do funcionamento de cada pessoa.",
+      "therapyTitle": "Psicoterapia para adultos",
+      "therapyText": "Atendimento psicológico online e individualizado, de acordo com as necessidades e objetivos de cada pessoa.",
+      "aboutEyebrow": "Sobre nós",
+      "aboutTitle": "Uma avaliação vai além de uma única hipótese.",
+      "aboutLead1": "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco na investigação de TDAH e TEA.",
+      "aboutLead2": "O processo considera diferentes hipóteses, diagnósticos diferenciais e possíveis condições associadas para uma compreensão mais ampla de cada caso.",
+      "workEyebrow": "Nossa forma de trabalhar",
+      "workTitle": "Uma hipótese é o ponto de partida. Não precisa ser a conclusão.",
+      "workLead1": "É comum chegar à avaliação com a suspeita de TDAH ou autismo. Mas dificuldades semelhantes podem ter diferentes explicações.",
+      "workLead2": "Por isso, na PertenSer, não buscamos confirmar um diagnóstico a qualquer custo.",
+      "workLead3": "Investigamos a hipótese inicial e também consideramos diagnósticos diferenciais e possíveis condições associadas para compreender o que melhor explica cada caso.",
+      "workQuote": "O objetivo não é apenas chegar a um diagnóstico, mas construir respostas que façam sentido para a sua história.",
+      "founderLead1": "Psicóloga e pós-graduada em Neuropsicologia, Bruna Kindlein é fundadora e responsável técnica pela Clínica PertenSer.",
+      "founderLead2": "Sua trajetória é marcada pelo trabalho com adultos e pela avaliação psicológica, especialmente na investigação de TEA e TDAH, além da experiência na supervisão de outros profissionais.",
+      "blogEyebrow": "Conteúdos PertenSer",
+      "blogTitle": "Informação também pode ajudar você a encontrar respostas.",
+      "blogLead": "Conteúdos sobre avaliação psicológica, TDAH, autismo na vida adulta e outros temas para ajudar você a compreender melhor suas dúvidas — sem transformar informação em autodiagnóstico.",
+      "ctaTitle": "Buscando compreender melhor o que acontece com você?",
+      "ctaText": "Se você tem dúvidas sobre seu funcionamento ou deseja investigar alguma hipótese, converse com a equipe da PertenSer e conheça o processo de avaliação psicológica.",
+      "ctaSupport": "Avaliação psicológica online para adultos em todo o Brasil."
+    },
+    "blog": {
+      "heroEyebrow": "Conteúdos PertenSer",
+      "heroTitle": "Informação para ajudar você a compreender melhor as suas dúvidas.",
+      "heroLead1": "Conteúdos sobre avaliação psicológica, TDAH, autismo na vida adulta e outros temas relacionados à compreensão do funcionamento psicológico.",
+      "heroLead2": "Informação cuidadosa para orientar — sem transformar conteúdo em autodiagnóstico.",
+      "listTitle": "Conteúdos recentes",
+      "ctaTitle": "Está buscando mais do que informação?",
+      "ctaText": "Se você tem dúvidas sobre seu funcionamento ou deseja investigar alguma hipótese, conheça o processo de avaliação psicológica da PertenSer.",
+      "metaDescription": "Conteúdos sobre avaliação psicológica, TDAH, autismo na vida adulta e outros temas para ajudar você a compreender melhor suas dúvidas."
+    },
+    "avaliacao": {
+      "heroEyebrow": "Avaliação psicológica para adultos",
+      "heroTitle": "Compreender o que acontece com você vai além de encontrar um diagnóstico.",
+      "heroLead1": "A avaliação psicológica é um processo de investigação que integra diferentes informações para compreender aspectos cognitivos, emocionais e comportamentais.",
+      "heroLead2": "Na PertenSer, o foco está na avaliação de adultos, especialmente na investigação de TDAH, TEA e diagnósticos diferenciais.",
+      "heroSupport": "Atendimento online para adultos em todo o Brasil.",
+      "seekTitle": "Talvez você tenha chegado até aqui buscando respostas.",
+      "seekLead1": "A avaliação pode ser procurada por adultos que têm dúvidas sobre o próprio funcionamento, suspeitam de TDAH ou autismo ou convivem com dificuldades que ainda não foram suficientemente compreendidas.",
+      "seekLead2": "Você não precisa ter certeza sobre uma hipótese antes de começar.",
+      "seekQuote": "A avaliação existe justamente para investigar o que pode estar por trás dessas dificuldades.",
+      "considerEyebrow": "O que consideramos",
+      "considerTitle": "Uma avaliação não se resume a uma lista de sintomas.",
+      "considerLead": "Dificuldades semelhantes podem ter diferentes explicações. Por isso, a avaliação considera diferentes aspectos do desenvolvimento e do funcionamento de cada pessoa.",
+      "card1Title": "Desenvolvimento e trajetória",
+      "card1Text": "Características e dificuldades observadas ao longo da vida.",
+      "card2Title": "Funcionamento atual",
+      "card2Text": "Aspectos cognitivos, emocionais e comportamentais presentes no cotidiano.",
+      "card3Title": "Hipótese inicial",
+      "card3Text": "Questões que motivaram a procura pela avaliação.",
+      "card4Title": "Diagnósticos diferenciais",
+      "card4Text": "Outras hipóteses e possíveis condições associadas relevantes para a compreensão do caso.",
+      "hypothesisTitle": "A hipótese é o ponto de partida, não uma conclusão.",
+      "hypothesisLead1": "É comum iniciar uma avaliação a partir da suspeita de TDAH ou autismo. Essa hipótese orienta a investigação, mas não determina o resultado.",
+      "hypothesisLead2": "O processo considera diferentes possibilidades para construir uma compreensão tecnicamente fundamentada de cada caso.",
+      "hypothesisQuote": "Mais do que confirmar ou descartar um diagnóstico, buscamos construir respostas que façam sentido para a sua história.",
+      "processEyebrow": "O processo",
+      "processTitle": "Como acontece a avaliação psicológica?",
+      "processNote": "Em média, o processo acontece ao longo de 8 sessões, podendo variar conforme as necessidades de cada caso.",
+      "investigateTitle": "O que podemos investigar?",
+      "tdahTitle": "TDAH em adultos",
+      "tdahText": "Investigação psicológica de TDAH na vida adulta e de seus possíveis impactos no funcionamento cotidiano.",
+      "teaTitle": "TEA em adultos",
+      "teaText": "Investigação psicológica de TEA na vida adulta, considerando desenvolvimento e funcionamento atual.",
+      "investigateNote": "Embora TDAH e TEA estejam entre os principais motivos de procura pela PertenSer, outras hipóteses podem ser consideradas durante a avaliação quando forem relevantes para a compreensão do caso.",
+      "onlineEyebrow": "Onde você estiver",
+      "onlineTitle": "Avaliação psicológica online para adultos em todo o Brasil.",
+      "onlineText": "O processo é realizado online. Caso seja necessário algum procedimento complementar presencial, a pessoa será orientada durante a avaliação.",
+      "clinicTitle": "Cuidado na escuta e rigor na investigação.",
+      "clinicLead1": "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, fundada e dirigida tecnicamente pela psicóloga Bruna Kindlein.",
+      "clinicLead2": "Os processos são conduzidos de forma individualizada, com rigor técnico e participação da equipe da clínica.",
+      "faqTitle": "Dúvidas sobre a avaliação psicológica",
+      "ctaTitle": "Você não precisa ter todas as respostas para começar.",
+      "ctaText": "Se você tem dúvidas sobre seu funcionamento ou deseja investigar alguma hipótese, converse com a equipe da PertenSer para entender como funciona a avaliação psicológica e quais são os próximos passos.",
+      "ctaSupport": "Atendimento online para adultos em todo o Brasil.",
+      "faqs": [
+        {
+          "question": "Preciso de encaminhamento médico?",
+          "answer": "Não. A avaliação pode ser procurada por iniciativa própria."
+        },
+        {
+          "question": "E se a hipótese de TDAH ou TEA não for confirmada?",
+          "answer": "A avaliação considera diferentes hipóteses para compreender o que melhor explica as questões apresentadas."
+        },
+        {
+          "question": "Quanto tempo dura?",
+          "answer": "Em média, 8 sessões, podendo variar conforme cada caso."
+        },
+        {
+          "question": "Vou receber um laudo?",
+          "answer": "Sim. Ao final, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação."
+        },
+        {
+          "question": "A avaliação é online?",
+          "answer": "Sim. A PertenSer atende adultos de todo o Brasil de forma online."
+        },
+        {
+          "question": "Vocês atendem por convênio?",
+          "answer": "O atendimento é particular. Dependendo do plano, pode haver possibilidade de reembolso. A equipe fornece a documentação referente ao serviço realizado."
+        }
+      ]
+    },
+    "tdah": {
+      "heroEyebrow": "TDAH em adultos",
+      "heroTitle": "Investigar a possibilidade de TDAH é também compreender a sua história.",
+      "heroLead": "A avaliação psicológica permite investigar a hipótese de TDAH na vida adulta considerando suas dificuldades, sua história de vida e seu funcionamento de forma ampla.",
+      "heroSupport": "Avaliação psicológica online para adultos em todo o Brasil.",
+      "seekTitle": "Talvez algumas dificuldades tenham acompanhado você por muito tempo sem uma explicação clara.",
+      "seekLead1": "Para algumas pessoas, a possibilidade de TDAH surge apenas na vida adulta, quando começam a buscar respostas para dificuldades que ainda não foram suficientemente compreendidas.",
+      "seekLead2": "Você não precisa ter certeza de que é TDAH para procurar uma avaliação.",
+      "seekQuote": "A suspeita é um ponto de partida para investigar — não uma conclusão.",
+      "evalEyebrow": "Avaliação de TDAH em adultos",
+      "evalTitle": "Uma avaliação olha além da hipótese inicial.",
+      "evalLead1": "Na investigação de TDAH em adultos, são considerados aspectos como atenção, organização, planejamento, gestão do tempo, impulsividade e funcionamento executivo, além dos impactos dessas dificuldades no cotidiano.",
+      "evalLead2": "A avaliação também considera o desenvolvimento ao longo da vida, diagnósticos diferenciais e possíveis condições associadas.",
+      "evalQuote": "O objetivo não é confirmar TDAH a qualquer custo, mas compreender o que melhor explica as dificuldades que você vivencia.",
+      "processEyebrow": "O processo",
+      "processTitle": "Como acontece a avaliação?",
+      "processNote": "Em média, o processo acontece ao longo de 8 sessões, podendo variar conforme cada caso.",
+      "clinicTitle": "Uma avaliação cuidadosa para uma compreensão mais ampla.",
+      "clinicLead1": "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TDAH e Transtorno do Espectro Autista (TEA).",
+      "clinicLead2": "Os processos são conduzidos com rigor técnico, supervisão e atenção às particularidades de cada história.",
+      "faqTitle": "Dúvidas sobre a avaliação de TDAH em adultos",
+      "ctaTitle": "Quer compreender melhor o que pode estar por trás das suas dificuldades?",
+      "ctaText": "Se você deseja investigar a possibilidade de TDAH, converse com a equipe da PertenSer para entender como funciona a avaliação e quais são os próximos passos.",
+      "ctaSupport": "Avaliação psicológica online para adultos em todo o Brasil.",
+      "faqs": [
+        {
+          "question": "Preciso ter certeza de que tenho TDAH?",
+          "answer": "Não. A avaliação existe justamente para investigar essa possibilidade."
+        },
+        {
+          "question": "E se a hipótese de TDAH não for confirmada?",
+          "answer": "A avaliação considera outras hipóteses que possam contribuir para a compreensão das dificuldades apresentadas."
+        },
+        {
+          "question": "A avaliação é online?",
+          "answer": "Sim. A PertenSer realiza avaliação psicológica online para adultos em todo o Brasil."
+        },
+        {
+          "question": "Quanto tempo dura?",
+          "answer": "Em média, 8 sessões, podendo variar conforme cada caso."
+        },
+        {
+          "question": "Recebo um laudo?",
+          "answer": "Sim. Ao final, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação."
+        }
+      ]
+    },
+    "tea": {
+      "heroEyebrow": "TEA em adultos",
+      "heroTitle": "Algumas respostas sobre o presente podem começar pela compreensão da sua história.",
+      "heroLead": "A avaliação psicológica permite investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, considerando o desenvolvimento, as formas de interação e comunicação, o funcionamento atual e diferentes experiências ao longo da vida.",
+      "heroSupport": "Avaliação psicológica online para adultos em todo o Brasil.",
+      "seekTitle": "A possibilidade de autismo pode surgir somente na vida adulta.",
+      "seekLead1": "Algumas pessoas chegam à vida adulta com dúvidas sobre o próprio funcionamento ou com dificuldades que nunca foram suficientemente compreendidas.",
+      "seekLead2": "Quando surge a hipótese de TEA, a avaliação psicológica permite investigar essa possibilidade de forma individualizada.",
+      "seekQuote": "Você não precisa chegar com uma resposta. A avaliação é justamente um espaço de investigação.",
+      "evalEyebrow": "Avaliação de TEA em adultos",
+      "evalTitle": "A avaliação considera mais do que a hipótese inicial.",
+      "evalLead1": "Na investigação de TEA em adultos, são considerados aspectos do desenvolvimento, comunicação e interação social, padrões de comportamento e interesses, sensibilidades e formas de adaptação desenvolvidas ao longo da vida.",
+      "evalLead2": "A avaliação também considera aspectos emocionais e cognitivos, diagnósticos diferenciais e possíveis condições associadas.",
+      "evalQuote": "O objetivo é compreender o que melhor explica as questões que levaram você a buscar a avaliação.",
+      "processEyebrow": "O processo",
+      "processTitle": "Como acontece a avaliação?",
+      "processNote": "Em média, o processo acontece ao longo de 8 sessões, podendo variar conforme cada caso.",
+      "clinicTitle": "Uma avaliação cuidadosa para compreender cada história em sua singularidade.",
+      "clinicLead1": "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TEA e TDAH.",
+      "clinicLead2": "Os processos contam com uma equipe e são conduzidos com rigor técnico, supervisão e atenção às particularidades de cada pessoa.",
+      "faqTitle": "Dúvidas sobre a avaliação de TEA em adultos",
+      "ctaTitle": "Quer investigar a possibilidade de TEA na vida adulta?",
+      "ctaText": "Converse com a equipe da PertenSer para entender como funciona a avaliação psicológica e quais são os próximos passos.",
+      "ctaSupport": "Avaliação psicológica online para adultos em todo o Brasil.",
+      "faqs": [
+        {
+          "question": "Preciso ter certeza de que sou autista para procurar uma avaliação?",
+          "answer": "Não. A avaliação existe justamente para investigar essa possibilidade."
+        },
+        {
+          "question": "E se a hipótese de TEA não for confirmada?",
+          "answer": "A avaliação considera outras hipóteses que possam contribuir para a compreensão das questões apresentadas."
+        },
+        {
+          "question": "Outras possibilidades também são consideradas?",
+          "answer": "Sim. Diagnósticos diferenciais e possíveis condições associadas podem ser considerados durante a avaliação."
+        },
+        {
+          "question": "A avaliação é online?",
+          "answer": "Sim. A PertenSer realiza avaliação psicológica online para adultos em todo o Brasil."
+        },
+        {
+          "question": "Quanto tempo dura?",
+          "answer": "Em média, 8 sessões, podendo variar conforme cada caso."
+        },
+        {
+          "question": "Recebo um laudo?",
+          "answer": "Sim. Ao final, é realizada a devolutiva e entregue o laudo psicológico correspondente à avaliação."
+        }
+      ]
+    },
+    "psicoterapia": {
+      "heroEyebrow": "Psicoterapia para adultos",
+      "heroTitle": "Um espaço de cuidado para o que você está vivendo.",
+      "heroLead": "Psicoterapia online para adultos, com acompanhamento de acordo com as necessidades e objetivos de cada pessoa.",
+      "heroSupport": "Atendimento online.",
+      "reasonTitle": "Cada pessoa chega à psicoterapia por uma razão diferente.",
+      "reasonLead1": "A psicoterapia pode ser buscada diante de dificuldades emocionais, conflitos, mudanças, questões nos relacionamentos ou do desejo de compreender melhor a si mesmo.",
+      "reasonLead2": "O acompanhamento é construído a partir das questões e objetivos de cada pessoa.",
+      "processEyebrow": "O processo",
+      "processTitle": "Como funciona a psicoterapia?",
+      "clinicEyebrow": "Clínica PertenSer",
+      "clinicTitle": "Um cuidado que considera a sua individualidade.",
+      "clinicLead": "A PertenSer é uma clínica voltada ao cuidado psicológico de adultos, com um trabalho pautado pela escuta e pelo acompanhamento individualizado.",
+      "faqTitle": "Perguntas frequentes",
+      "ctaTitle": "Quer saber mais sobre a psicoterapia?",
+      "ctaText": "Converse com a equipe da PertenSer para esclarecer dúvidas e conhecer os próximos passos.",
+      "faqs": [
+        {
+          "question": "A psicoterapia é online?",
+          "answer": "Sim. Os atendimentos são realizados online para adultos."
+        },
+        {
+          "question": "Qual é a frequência das sessões?",
+          "answer": "A frequência é definida de acordo com as necessidades do acompanhamento."
+        },
+        {
+          "question": "Quanto tempo dura a psicoterapia?",
+          "answer": "Não existe uma duração única. O tempo varia conforme cada processo."
+        },
+        {
+          "question": "Vocês atendem por convênio?",
+          "answer": "O atendimento é particular. Dependendo do plano, pode haver possibilidade de reembolso."
+        }
+      ]
+    },
+    "sobre": {
+      "heroEyebrow": "Sobre a PertenSer",
+      "heroTitle": "Uma clínica criada para olhar além de um diagnóstico.",
+      "heroLead1": "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco na investigação de TDAH e Transtorno do Espectro Autista (TEA).",
+      "heroLead2": "O trabalho une rigor técnico, escuta e um olhar individualizado para cada caso.",
+      "founderLead1": "Bruna Kindlein é psicóloga, pós-graduada em Neuropsicologia, fundadora e responsável técnica da Clínica PertenSer.",
+      "founderLead2": "Sua atuação é voltada ao trabalho com adultos e à avaliação psicológica, especialmente na investigação de TDAH e TEA. Também possui experiência na supervisão de outros profissionais.",
+      "founderLead3": "A PertenSer nasceu dessa trajetória e da proposta de oferecer um trabalho tecnicamente fundamentado, cuidadoso e próximo.",
+      "teamTitle": "Um trabalho construído em equipe.",
+      "teamLead": "A PertenSer conta com uma equipe envolvida nos processos da clínica, com acompanhamento da responsável técnica e cuidado em cada etapa do atendimento.",
+      "teamQuote": "Rigor para investigar. Clareza para orientar. Cuidado para compreender.",
+      "ctaTitle": "Conheça o trabalho da PertenSer.",
+      "ctaText": "Saiba mais sobre a avaliação psicológica ou converse com a equipe para esclarecer suas dúvidas.",
+      "ctaSupport": "Atendimento online para adultos em todo o Brasil."
+    },
+    "contato": {
+      "heroEyebrow": "Fale com a PertenSer",
+      "heroTitle": "Vamos conversar sobre o que você está buscando?",
+      "heroLead": "Entre em contato com a equipe da PertenSer para saber mais sobre avaliação psicológica, psicoterapia e os próximos passos para o atendimento.",
+      "heroSupport": "Atendimento online para adultos.",
+      "listTitle": "Entre em contato",
+      "whatsappText": "Para informações e agendamento.",
+      "emailText": "Envie uma mensagem e retornaremos o contato.",
+      "instagramText": "Acompanhe os conteúdos da clínica.",
+      "whereTitle": "Onde você estiver.",
+      "whereLead": "A PertenSer realiza avaliação psicológica online para adultos de diferentes regiões do Brasil."
+    }
+  }
+}

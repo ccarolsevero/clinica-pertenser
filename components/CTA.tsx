@@ -1,5 +1,7 @@
-import { whatsappUrl } from "@/lib/site";
+"use client";
+
 import { Button } from "./Button";
+import { useTeamMessage } from "./SiteProvider";
 
 type Props = {
   title: string;
@@ -9,25 +11,22 @@ type Props = {
   secondary?: { href: string; label: string; external?: boolean };
 };
 
-export function CTA({
-  title,
-  text,
-  support,
-  primary = {
-    href: whatsappUrl("Olá, gostaria de falar com a equipe da PertenSer."),
+export function CTA({ title, text, support, primary, secondary }: Props) {
+  const team = useTeamMessage();
+  const action = primary ?? {
+    href: team,
     label: "Falar com a equipe da PertenSer",
     external: true,
-  },
-  secondary,
-}: Props) {
+  };
+
   return (
     <section className="cta-band">
       <div className="container">
         <h2>{title}</h2>
         <p className="lead">{text}</p>
         <div className="actions">
-          <Button href={primary.href} variant="light" external={primary.external}>
-            {primary.label}
+          <Button href={action.href} variant="light" external={action.external}>
+            {action.label}
           </Button>
           {secondary ? (
             <Button href={secondary.href} variant="ghost" external={secondary.external}>

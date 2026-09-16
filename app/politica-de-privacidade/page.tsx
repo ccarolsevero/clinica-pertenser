@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
+import { getContent } from "@/lib/store";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description: "Como a Clínica PertenSer trata dados pessoais em seu site e em seus canais de contato.",
 };
 
-export default function PrivacidadePage() {
+export default async function PrivacidadePage() {
+  const { site } = await getContent();
   return (
     <section className="section">
       <div className="container prose">
