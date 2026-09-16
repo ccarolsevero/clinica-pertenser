@@ -114,17 +114,25 @@ async function commitToGitHub(json: string) {
 export async function saveContent(input: SiteContent) {
   const data = normalizeContent(input);
   const json = `${JSON.stringify(data, null, 2)}\n`;
-  await fs.writeFile(CONTENT_FILE, json, "utf8");
-  cache = null;
+  const onVercel = Boolean(process.env.VERCEL);
 
   let github: "saved" | "skipped" | "missing" = "skipped";
-  if (process.env.VERCEL && !process.env.GITHUB_TOKEN) {
-    github = "missing";
-  } else if (process.env.GITHUB_TOKEN) {
+  if (onVercel || process.env.GITHUB_TOKEN) {
+    if (!process.env.GITHUB_TOKEN || !process.env.GITHUB_REPO) {
+      throw new Error(
+        "Neste servidor não é possível gravar o arquivo local. Cadastre GITHUB_TOKEN e GITHUB_REPO na Vercel para salvar os textos.",
+      );
+    }
     await commitToGitHub(json);
     github = "saved";
   }
 
+  if (!onVercel) {
+    await fs.writeFile(CONTENT_FILE, json, "utf8");
+  }
+
+  const stat = await fs.stat(CONTENT_FILE);
+  cache = { data, mtime: stat.mtimeMs };
   revalidatePath("/", "layout");
   return { data, github };
 }
