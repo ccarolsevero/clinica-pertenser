@@ -97,10 +97,17 @@
     "categories": [
       "Avaliação Psicológica",
       "TDAH em Adultos",
-      "TEA em Adultos",
-      "Psicoterapia"
+      "TEA em Adultos"
     ],
     "articles": [
+      {
+        "slug": "teste",
+        "title": "teste",
+        "excerpt": "testesteretet",
+        "category": "TEA em Adultos",
+        "date": "2026-09-16",
+        "content": "<ul><li><p>dfsdjbsdhafhiFHsljvdbsjdvbasjbvjsBDVJKsbdvjsbFDJsffjnbsdjkfnjksdbf</p></li></ul><p>dsjnfjskdbfjksdbfjksdbfkjbsdf<br><u>fhbsdfhjbsdhjfbsdf</u><br><em><u>sgdasgdagsd</u></em><br><strong><em><u>sdhjhsdjkhasjkd</u></em></strong></p><p></p>"
+      },
       {
         "slug": "avaliacao-psicologica-nao-e-autodiagnostico",
         "title": "Avaliação psicológica não é o mesmo que autodiagnóstico",
