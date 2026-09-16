@@ -77,11 +77,13 @@ export function AdminPanel() {
     );
   }
 
+  const data = blog;
+
   function updateArticle(patch: Partial<Article>) {
-    const articles = blog.articles.map((article, index) =>
+    const articles = data.articles.map((article, index) =>
       index === articleIndex ? { ...article, ...patch } : article,
     );
-    setBlog({ ...blog, articles });
+    setBlog({ ...data, articles });
   }
 
   return (
@@ -114,20 +116,20 @@ export function AdminPanel() {
         <div>
           <h2>Categorias</h2>
           <ul className="admin-list">
-            {blog.categories.map((category) => (
+            {data.categories.map((category) => (
               <li key={category}>
                 <span>{category}</span>
                 <button
                   type="button"
                   className="admin-link"
                   onClick={() => {
-                    if (blog.articles.some((article) => article.category === category)) {
+                    if (data.articles.some((article) => article.category === category)) {
                       setError("Há artigos nesta categoria. Mova-os antes de excluir.");
                       return;
                     }
                     const next = {
-                      ...blog,
-                      categories: blog.categories.filter((item) => item !== category),
+                      ...data,
+                      categories: data.categories.filter((item) => item !== category),
                     };
                     setBlog(next);
                     void save(next);
@@ -149,8 +151,8 @@ export function AdminPanel() {
               className="btn btn-coral"
               onClick={() => {
                 const name = categoryName.trim();
-                if (!name || blog.categories.includes(name)) return;
-                const next = { ...blog, categories: [...blog.categories, name] };
+                if (!name || data.categories.includes(name)) return;
+                const next = { ...data, categories: [...data.categories, name] };
                 setBlog(next);
                 setCategoryName("");
                 void save(next);
@@ -168,8 +170,8 @@ export function AdminPanel() {
               type="button"
               className="btn btn-ghost"
               onClick={() => {
-                const article = emptyArticle(blog.categories[0] || "Geral");
-                setBlog({ ...blog, articles: [article, ...blog.articles] });
+                const article = emptyArticle(data.categories[0] || "Geral");
+                setBlog({ ...data, articles: [article, ...data.articles] });
                 setArticleIndex(0);
               }}
             >
@@ -177,7 +179,7 @@ export function AdminPanel() {
             </button>
           </div>
           <ul className="admin-list">
-            {blog.articles.map((article, index) => (
+            {data.articles.map((article, index) => (
               <li key={`${article.slug}-${index}`}>
                 <button type="button" className={index === articleIndex ? "active" : ""} onClick={() => setArticleIndex(index)}>
                   {article.title || "Artigo sem título"}
@@ -205,7 +207,7 @@ export function AdminPanel() {
                   value={selectedArticle.category}
                   onChange={(event) => updateArticle({ category: event.target.value })}
                 >
-                  {blog.categories.map((category) => (
+                  {data.categories.map((category) => (
                     <option key={category} value={category}>
                       {category}
                     </option>
@@ -240,8 +242,8 @@ export function AdminPanel() {
                 type="button"
                 className="admin-link"
                 onClick={() => {
-                  const articles = blog.articles.filter((_, index) => index !== articleIndex);
-                  setBlog({ ...blog, articles });
+                  const articles = data.articles.filter((_, index) => index !== articleIndex);
+                  setBlog({ ...data, articles });
                   setArticleIndex(0);
                 }}
               >
