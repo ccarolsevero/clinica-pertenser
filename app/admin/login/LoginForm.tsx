@@ -34,7 +34,7 @@ export function LoginForm() {
       <form className="admin-card" onSubmit={onSubmit}>
         <p className="eyebrow">Painel PertenSer</p>
         <h1>Entrar</h1>
-        <p className="lead">Use a senha do painel para editar os textos do site.</p>
+        <p className="lead">Use a senha do painel para criar textos e categorias do blog.</p>
         <label>
           Senha
           <input
