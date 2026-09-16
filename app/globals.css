@@ -984,7 +984,7 @@ h3 {
 }
 
 .hero-photo-psicoterapia {
-  object-position: 100% 50%;
+  object-position: 100% 46%;
 }
 
 .hero-photo-contato {
@@ -1153,6 +1153,10 @@ h3 {
 
   .hero-photo-image {
     object-position: right top;
+  }
+
+  .hero-photo-image.hero-photo-psicoterapia {
+    object-position: 100% 18%;
   }
 
   .hero-photo::after {
