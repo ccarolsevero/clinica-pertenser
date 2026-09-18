@@ -22,7 +22,7 @@ export default async function BlogPage() {
 
   return (
     <>
-      <section className="hero-photo">
+      <section className="hero-photo" id="inicio">
         <div className="hero-photo-media">
           <Image
             src="/bruna-blog-hero.png"
@@ -46,7 +46,7 @@ export default async function BlogPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="conteudos">
         <div className="container">
           <div className="section-head">
             <h2>{t("listTitle")}</h2>

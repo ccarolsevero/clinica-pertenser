@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/Button";
+import { JsonLd } from "@/components/JsonLd";
+import { webPageJsonLd } from "@/lib/seo";
 import { pageText, teamMessage } from "@/lib/site";
 import { getContent } from "@/lib/store";
 
+const description =
+  "Entre em contato com a equipe da PertenSer para saber mais sobre avaliação psicológica, psicoterapia e os próximos passos para o atendimento.";
+
 export const metadata: Metadata = {
   title: "Contato",
-  description:
-    "Entre em contato com a equipe da PertenSer para saber mais sobre avaliação psicológica, psicoterapia e os próximos passos para o atendimento.",
+  description,
+  alternates: { canonical: "/contato" },
 };
 
 export default async function ContatoPage() {
@@ -17,7 +22,15 @@ export default async function ContatoPage() {
 
   return (
     <>
-      <section className="hero-photo">
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Contato",
+          description,
+          path: "/contato",
+        })}
+      />
+
+      <section className="hero-photo" id="inicio">
         <div className="hero-photo-media">
           <Image
             src="/contato-hero.png"
@@ -46,7 +59,7 @@ export default async function ContatoPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="canais">
         <div className="container">
           <div className="section-head">
             <h2>{t("listTitle")}</h2>
@@ -80,7 +93,7 @@ export default async function ContatoPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="atendimento-online">
         <div className="container">
           <div className="section-head">
             <h2>{t("whereTitle")}</h2>

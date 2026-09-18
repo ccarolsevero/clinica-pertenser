@@ -3,24 +3,41 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
+import { JsonLd } from "@/components/JsonLd";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
+import { faqPageJsonLd, webPageJsonLd } from "@/lib/seo";
 import { pageFaqs, pageText, whatsappUrl } from "@/lib/site";
 import { getContent } from "@/lib/store";
 
+const description =
+  "Psicoterapia online para adultos, com acompanhamento individualizado de acordo com as necessidades de cada pessoa.";
+
 export const metadata: Metadata = {
   title: "Psicoterapia para adultos",
-  description:
-    "Psicoterapia online para adultos, com acompanhamento individualizado de acordo com as necessidades de cada pessoa.",
+  description,
+  alternates: { canonical: "/psicoterapia" },
 };
 
 export default async function PsicoterapiaPage() {
   const { pages, site, processes } = await getContent();
   const t = (key: string) => pageText(pages, "psicoterapia", key);
+  const faqs = pageFaqs(pages, "psicoterapia");
 
   return (
     <>
-      <section className="hero-photo">
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            name: "Psicoterapia para adultos",
+            description,
+            path: "/psicoterapia",
+          }),
+          faqPageJsonLd(faqs),
+        ]}
+      />
+
+      <section className="hero-photo" id="inicio">
         <div className="hero-photo-media">
           <Image
             src="/psicoterapia-hero.png"
@@ -52,7 +69,7 @@ export default async function PsicoterapiaPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="por-que-psicoterapia">
         <div className="container">
           <div className="section-head">
             <h2>{t("reasonTitle")}</h2>
@@ -64,7 +81,7 @@ export default async function PsicoterapiaPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="como-funciona">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("processEyebrow")}</p>
@@ -74,7 +91,7 @@ export default async function PsicoterapiaPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="clinica">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("clinicEyebrow")}</p>
@@ -97,12 +114,12 @@ export default async function PsicoterapiaPage() {
 
       <Testimonials />
 
-      <section className="section alt">
+      <section className="section alt" id="perguntas-frequentes">
         <div className="container">
           <div className="section-head">
             <h2>{t("faqTitle")}</h2>
           </div>
-          <FAQ items={pageFaqs(pages, "psicoterapia")} />
+          <FAQ items={faqs} />
         </div>
       </section>
 

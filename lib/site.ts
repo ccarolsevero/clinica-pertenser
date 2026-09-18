@@ -18,10 +18,13 @@ export const nav = [
 export const footerNav = [
   { href: "/", label: "Início" },
   { href: "/avaliacao-psicologica", label: "Avaliação Psicológica" },
+  { href: "/avaliacao-psicologica#como-funciona", label: "Como funciona" },
+  { href: "/avaliacao-psicologica#perguntas-frequentes", label: "Perguntas frequentes" },
   { href: "/tdah-em-adultos", label: "TDAH em Adultos" },
   { href: "/tea-em-adultos", label: "TEA em Adultos" },
   { href: "/psicoterapia", label: "Psicoterapia" },
   { href: "/sobre", label: "Sobre" },
+  { href: "/sobre#fundadora", label: "Bruna Kindlein" },
   { href: "/blog", label: "Blog" },
   { href: "/contato", label: "Contato" },
   { href: "/politica-de-privacidade", label: "Política de Privacidade" },

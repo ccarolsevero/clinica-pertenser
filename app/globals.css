@@ -28,6 +28,11 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header) + 12px);
+}
+
+[id] {
+  scroll-margin-top: calc(var(--header) + 12px);
 }
 
 body {
@@ -840,11 +845,27 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px 64px;
+  grid-template-columns: 1.2fr 1fr 0.7fr;
+  gap: 48px 48px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(251, 248, 243, 0.12);
   align-items: start;
+}
+
+.footer-nav {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.footer-nav a {
+  color: rgba(251, 248, 243, 0.78);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-nav a:hover {
+  color: var(--paper);
 }
 
 .footer .logo strong {

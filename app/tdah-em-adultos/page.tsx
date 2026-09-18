@@ -3,24 +3,41 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
+import { JsonLd } from "@/components/JsonLd";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
+import { faqPageJsonLd, webPageJsonLd } from "@/lib/seo";
 import { pageFaqs, pageText } from "@/lib/site";
 import { getContent } from "@/lib/store";
 
+const description =
+  "Avaliação psicológica para investigar a possibilidade de TDAH na vida adulta, considerando história, funcionamento e diagnósticos diferenciais.";
+
 export const metadata: Metadata = {
   title: "TDAH em adultos",
-  description:
-    "Avaliação psicológica para investigar a possibilidade de TDAH na vida adulta, considerando história, funcionamento e diagnósticos diferenciais.",
+  description,
+  alternates: { canonical: "/tdah-em-adultos" },
 };
 
 export default async function TdahPage() {
   const { pages, site, processes } = await getContent();
   const t = (key: string) => pageText(pages, "tdah", key);
+  const faqs = pageFaqs(pages, "tdah");
 
   return (
     <>
-      <section className="hero-photo">
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            name: "TDAH em adultos",
+            description,
+            path: "/tdah-em-adultos",
+          }),
+          faqPageJsonLd(faqs),
+        ]}
+      />
+
+      <section className="hero-photo" id="inicio">
         <div className="hero-photo-media">
           <Image
             src="/tea-tdah-hero.png"
@@ -47,7 +64,7 @@ export default async function TdahPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="quando-buscar">
         <div className="container">
           <div className="section-head">
             <h2>{t("seekTitle")}</h2>
@@ -60,7 +77,7 @@ export default async function TdahPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="como-e-a-avaliacao">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("evalEyebrow")}</p>
@@ -74,7 +91,7 @@ export default async function TdahPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="como-funciona">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("processEyebrow")}</p>
@@ -84,7 +101,7 @@ export default async function TdahPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="clinica">
         <div className="container">
           <div className="section-head">
             <h2>{t("clinicTitle")}</h2>
@@ -107,12 +124,12 @@ export default async function TdahPage() {
 
       <Testimonials alt />
 
-      <section className="section">
+      <section className="section" id="perguntas-frequentes">
         <div className="container">
           <div className="section-head">
             <h2>{t("faqTitle")}</h2>
           </div>
-          <FAQ items={pageFaqs(pages, "tdah")} />
+          <FAQ items={faqs} />
         </div>
       </section>
 

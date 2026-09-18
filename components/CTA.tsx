@@ -7,11 +7,12 @@ type Props = {
   title: string;
   text: string;
   support?: string;
+  id?: string;
   primary?: { href: string; label: string; external?: boolean };
   secondary?: { href: string; label: string; external?: boolean };
 };
 
-export function CTA({ title, text, support, primary, secondary }: Props) {
+export function CTA({ title, text, support, id = "contato", primary, secondary }: Props) {
   const team = useTeamMessage();
   const action = primary ?? {
     href: team,
@@ -20,7 +21,7 @@ export function CTA({ title, text, support, primary, secondary }: Props) {
   };
 
   return (
-    <section className="cta-band">
+    <section className="cta-band" id={id}>
       <div className="container">
         <h2>{title}</h2>
         <p className="lead">{text}</p>

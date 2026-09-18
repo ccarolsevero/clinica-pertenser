@@ -3,24 +3,41 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
+import { JsonLd } from "@/components/JsonLd";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
+import { faqPageJsonLd, webPageJsonLd } from "@/lib/seo";
 import { pageFaqs, pageText } from "@/lib/site";
 import { getContent } from "@/lib/store";
 
+const description =
+  "Avaliação psicológica para investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, de forma individualizada.";
+
 export const metadata: Metadata = {
   title: "TEA em adultos",
-  description:
-    "Avaliação psicológica para investigar a possibilidade de Transtorno do Espectro Autista (TEA) na vida adulta, de forma individualizada.",
+  description,
+  alternates: { canonical: "/tea-em-adultos" },
 };
 
 export default async function TeaPage() {
   const { pages, site, processes } = await getContent();
   const t = (key: string) => pageText(pages, "tea", key);
+  const faqs = pageFaqs(pages, "tea");
 
   return (
     <>
-      <section className="hero-photo">
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            name: "TEA em adultos",
+            description,
+            path: "/tea-em-adultos",
+          }),
+          faqPageJsonLd(faqs),
+        ]}
+      />
+
+      <section className="hero-photo" id="inicio">
         <div className="hero-photo-media">
           <Image
             src="/tea-hero.png"
@@ -47,7 +64,7 @@ export default async function TeaPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="quando-buscar">
         <div className="container">
           <div className="section-head">
             <h2>{t("seekTitle")}</h2>
@@ -60,7 +77,7 @@ export default async function TeaPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="como-e-a-avaliacao">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("evalEyebrow")}</p>
@@ -74,7 +91,7 @@ export default async function TeaPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="como-funciona">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("processEyebrow")}</p>
@@ -84,7 +101,7 @@ export default async function TeaPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="clinica">
         <div className="container">
           <div className="section-head">
             <h2>{t("clinicTitle")}</h2>
@@ -107,12 +124,12 @@ export default async function TeaPage() {
 
       <Testimonials alt />
 
-      <section className="section">
+      <section className="section" id="perguntas-frequentes">
         <div className="container">
           <div className="section-head">
             <h2>{t("faqTitle")}</h2>
           </div>
-          <FAQ items={pageFaqs(pages, "tea")} />
+          <FAQ items={faqs} />
         </div>
       </section>
 

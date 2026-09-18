@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { footerNav } from "@/lib/site";
 import { useSite, useWhatsapp } from "./SiteProvider";
 import { Logo } from "./Logo";
 
@@ -21,6 +22,17 @@ export function Footer() {
               <br />
               {site.responsible.founder}
             </p>
+          </div>
+
+          <div>
+            <h3>Páginas</h3>
+            <nav className="footer-nav" aria-label="Rodapé">
+              {footerNav.map((item) => (
+                <Link key={item.href} href={item.href}>
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
           <div className="footer-contact">

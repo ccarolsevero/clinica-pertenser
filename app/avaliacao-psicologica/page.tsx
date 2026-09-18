@@ -3,8 +3,10 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
 import { FAQ } from "@/components/FAQ";
+import { JsonLd } from "@/components/JsonLd";
 import { ProcessSteps } from "@/components/ProcessSteps";
 import { Testimonials } from "@/components/Testimonials";
+import { faqPageJsonLd, webPageJsonLd } from "@/lib/seo";
 import { pageFaqs, pageText, teamMessage } from "@/lib/site";
 import { getContent } from "@/lib/store";
 
@@ -12,16 +14,31 @@ export const metadata: Metadata = {
   title: "Avaliação psicológica para adultos",
   description:
     "Avaliação psicológica online para adultos, com foco na investigação de TDAH, TEA e diagnósticos diferenciais. Atendimento em todo o Brasil.",
+  alternates: { canonical: "/avaliacao-psicologica" },
 };
 
 export default async function AvaliacaoPage() {
   const { pages, site, processes } = await getContent();
   const t = (key: string) => pageText(pages, "avaliacao", key);
   const team = teamMessage(site.whatsapp);
+  const faqs = pageFaqs(pages, "avaliacao");
+  const description =
+    "Avaliação psicológica online para adultos, com foco na investigação de TDAH, TEA e diagnósticos diferenciais. Atendimento em todo o Brasil.";
 
   return (
     <>
-      <section className="hero-photo">
+      <JsonLd
+        data={[
+          webPageJsonLd({
+            name: "Avaliação psicológica para adultos",
+            description,
+            path: "/avaliacao-psicologica",
+          }),
+          faqPageJsonLd(faqs),
+        ]}
+      />
+
+      <section className="hero-photo" id="inicio">
         <div className="hero-photo-media">
           <Image
             src="/avaliacao-hero-bruna-jaleco.png"
@@ -51,7 +68,7 @@ export default async function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="quando-buscar">
         <div className="container">
           <div className="section-head">
             <h2>{t("seekTitle")}</h2>
@@ -64,7 +81,7 @@ export default async function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="quando-considerar">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("considerEyebrow")}</p>
@@ -94,7 +111,7 @@ export default async function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section green">
+      <section className="section green" id="hipotese">
         <div className="container">
           <div className="section-head">
             <h2>{t("hypothesisTitle")}</h2>
@@ -107,7 +124,7 @@ export default async function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="como-funciona">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("processEyebrow")}</p>
@@ -117,7 +134,7 @@ export default async function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="tdah-e-tea">
         <div className="container">
           <div className="section-head">
             <h2>{t("investigateTitle")}</h2>
@@ -144,7 +161,7 @@ export default async function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="avaliacao-online">
         <div className="container split">
           <div>
             <p className="eyebrow">{t("onlineEyebrow")}</p>
@@ -156,7 +173,7 @@ export default async function AvaliacaoPage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="clinica">
         <div className="container">
           <div className="section-head">
             <h2>{t("clinicTitle")}</h2>
@@ -179,12 +196,12 @@ export default async function AvaliacaoPage() {
 
       <Testimonials />
 
-      <section className="section alt">
+      <section className="section alt" id="perguntas-frequentes">
         <div className="container">
           <div className="section-head">
             <h2>{t("faqTitle")}</h2>
           </div>
-          <FAQ items={pageFaqs(pages, "avaliacao")} />
+          <FAQ items={faqs} />
         </div>
       </section>
 

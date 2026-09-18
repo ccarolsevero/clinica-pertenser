@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
+import { JsonLd } from "@/components/JsonLd";
 import { PortraitSlot } from "@/components/PortraitSlot";
+import { webPageJsonLd } from "@/lib/seo";
 import { pageText, teamMessage } from "@/lib/site";
 import { getContent } from "@/lib/store";
 
+const description =
+  "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TDAH e TEA.";
+
 export const metadata: Metadata = {
   title: "Sobre a PertenSer",
-  description:
-    "A PertenSer é uma clínica especializada em avaliação psicológica de adultos, com foco principal na investigação de TDAH e TEA.",
+  description,
+  alternates: { canonical: "/sobre" },
 };
 
 export default async function SobrePage() {
@@ -18,7 +23,15 @@ export default async function SobrePage() {
 
   return (
     <>
-      <section className="page-hero">
+      <JsonLd
+        data={webPageJsonLd({
+          name: "Sobre a PertenSer",
+          description,
+          path: "/sobre",
+        })}
+      />
+
+      <section className="page-hero" id="inicio">
         <div className="container hero-grid">
           <div>
             <p className="eyebrow">{t("heroEyebrow")}</p>
@@ -42,7 +55,7 @@ export default async function SobrePage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="fundadora">
         <div className="container split reverse">
           <PortraitSlot
             src="/bruna-sobre.png"
@@ -67,7 +80,7 @@ export default async function SobrePage() {
         </div>
       </section>
 
-      <section className="section green">
+      <section className="section green" id="equipe">
         <div className="container">
           <div className="section-head">
             <h2>{t("teamTitle")}</h2>

@@ -37,8 +37,18 @@ export function articleHtml(content: string | string[] | undefined) {
   return content;
 }
 
+function slugifyHeading(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80);
+}
+
 export function sanitizeArticleHtml(html: string) {
-  return html.replace(/<\/?([a-z0-9]+)(\s[^>]*)?>/gi, (match, tag: string, attrs = "") => {
+  const cleaned = html.replace(/<\/?([a-z0-9]+)(\s[^>]*)?>/gi, (match, tag: string, attrs = "") => {
     const name = tag.toLowerCase();
     if (!ALLOWED_TAGS.has(name)) return "";
     if (match.startsWith("</")) return `</${name}>`;
@@ -50,5 +60,11 @@ export function sanitizeArticleHtml(html: string) {
       return `<a href="${escapeHtml(url)}" rel="noopener noreferrer" target="_blank">`;
     }
     return `<${name}>`;
+  });
+
+  return cleaned.replace(/<(h2|h3)>([\s\S]*?)<\/\1>/gi, (_match, tag: string, inner: string) => {
+    const text = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const id = slugifyHeading(text);
+    return id ? `<${tag} id="${id}">${inner}</${tag}>` : `<${tag}>${inner}</${tag}>`;
   });
 }

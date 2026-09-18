@@ -2,8 +2,10 @@ import Image from "next/image";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Button } from "@/components/Button";
 import { CTA } from "@/components/CTA";
+import { JsonLd } from "@/components/JsonLd";
 import { PortraitSlot } from "@/components/PortraitSlot";
 import { getLatestArticles } from "@/lib/articles";
+import { webPageJsonLd } from "@/lib/seo";
 import { pageText, teamMessage } from "@/lib/site";
 import { getContent } from "@/lib/store";
 
@@ -16,7 +18,16 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="hero-photo">
+      <JsonLd
+        data={webPageJsonLd({
+          name: `${site.name} | Avaliação psicológica de adultos`,
+          description:
+            "Avaliação psicológica online para adultos, com foco na investigação de TDAH, TEA e diagnósticos diferenciais.",
+          path: "/",
+        })}
+      />
+
+      <section className="hero-photo" id="inicio">
         <div className="hero-photo-media">
           <Image
             src="/home-hero.png"
@@ -47,7 +58,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="servicos">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("helpEyebrow")}</p>
@@ -72,7 +83,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="sobre">
         <div className="container split">
           <div>
             <p className="eyebrow">{t("aboutEyebrow")}</p>
@@ -90,7 +101,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="section green">
+      <section className="section green" id="como-trabalhamos">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow light">{t("workEyebrow")}</p>
@@ -103,14 +114,14 @@ export default async function HomePage() {
           </div>
           <p className="quote light">{t("workQuote")}</p>
           <div className="actions">
-            <Button href="/avaliacao-psicologica" variant="light">
+            <Button href="/avaliacao-psicologica#como-funciona" variant="light">
               Entenda como funciona a avaliação
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="fundadora">
         <div className="container split reverse">
           <PortraitSlot
             src="/bruna-kindlein.png"
@@ -130,13 +141,13 @@ export default async function HomePage() {
               {site.responsible.founder}
             </p>
             <div className="actions">
-              <Button href="/sobre">Conheça a PertenSer</Button>
+              <Button href="/sobre#fundadora">Conheça a PertenSer</Button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section alt">
+      <section className="section alt" id="blog">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">{t("blogEyebrow")}</p>
